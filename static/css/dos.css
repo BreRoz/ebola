@@ -49,6 +49,42 @@ body::before {
   z-index: 9999;
 }
 
+/* CRT flicker */
+@keyframes crt-flicker {
+  0%   { opacity: 1; }
+  92%  { opacity: 1; }
+  93%  { opacity: 0.82; }
+  94%  { opacity: 1; }
+  96%  { opacity: 0.9; }
+  97%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+body {
+  animation: crt-flicker 8s infinite;
+}
+
+/* ── Boot screen ────────────────────────────────────────────────────── */
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 99999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px 50px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--green);
+  overflow: hidden;
+  transition: opacity 0.6s ease;
+}
+#boot-screen.fade-out { opacity: 0; pointer-events: none; }
+#boot-lines { line-height: 1.9; }
+.boot-line { display: block; }
+.boot-line.access { color: var(--green-bright); font-size: 22px; font-family: var(--font-vt); letter-spacing: 0.1em; margin-top: 10px; }
+.boot-line.dim    { color: var(--text-dim); }
+
 /* ── Header ────────────────────────────────────────────────────────── */
 .site-header {
   background: var(--green);

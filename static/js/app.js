@@ -1,3 +1,58 @@
+// ── Boot sequence ──────────────────────────────────────────────────────
+(function() {
+  const lines = [
+    { text: 'EBOLA TRACKER OS v2.6.0 — INITIALIZING...', cls: '' },
+    { text: 'LOADING WHO SITUATION REPORT MODULE...', cls: 'dim' },
+    { text: 'LOADING AFRICA CDC FEED...', cls: 'dim' },
+    { text: 'CONNECTING TO FIELD CORRESPONDENTS — DRC/ITURI...', cls: 'dim' },
+    { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
+    { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
+    { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
+    { text: '600+ SUSPECTED  ·  139+ DEATHS  ·  51 CONFIRMED', cls: '' },
+    { text: '', cls: '' },
+    { text: '[ ACCESS GRANTED ]', cls: 'access' },
+  ];
+
+  const container = document.getElementById('boot-lines');
+  const screen    = document.getElementById('boot-screen');
+  let i = 0;
+
+  function nextLine() {
+    if (i >= lines.length) {
+      setTimeout(() => {
+        screen.classList.add('fade-out');
+        setTimeout(() => { screen.style.display = 'none'; }, 650);
+        typewriterStats();
+      }, 600);
+      return;
+    }
+    const span = document.createElement('span');
+    span.className = 'boot-line' + (lines[i].cls ? ' ' + lines[i].cls : '');
+    span.textContent = lines[i].text || ' ';
+    container.appendChild(span);
+    i++;
+    setTimeout(nextLine, i === lines.length ? 400 : Math.random() * 120 + 60);
+  }
+
+  nextLine();
+})();
+
+// ── Typewriter stats ────────────────────────────────────────────────────
+function typewriterStats() {
+  const values = document.querySelectorAll('.stat-value');
+  values.forEach((el, idx) => {
+    const final = el.textContent;
+    el.textContent = '';
+    let c = 0;
+    setTimeout(() => {
+      const iv = setInterval(() => {
+        el.textContent = final.slice(0, ++c);
+        if (c >= final.length) clearInterval(iv);
+      }, 35);
+    }, idx * 120);
+  });
+}
+
 // ── Share dropdown ─────────────────────────────────────────────────────
 function shareTracker() {
   const menu = document.getElementById('map-share-menu');
