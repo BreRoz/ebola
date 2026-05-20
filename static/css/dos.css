@@ -206,12 +206,17 @@ body::before {
   color: var(--green-bright);
   font-size: 10px;
   display: block;
-  text-decoration: none;
 }
 
-a.update-date:hover {
-  text-decoration: underline;
+.update-src {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.update-src:hover {
   color: var(--green);
+  text-decoration: underline;
 }
 
 /* ── Right panel (map) ─────────────────────────────────────────────── */
