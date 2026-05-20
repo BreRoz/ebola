@@ -275,6 +275,23 @@ body::before {
   color: #000;
 }
 
+/* Share dropdown menu */
+.share-menu-item {
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--green);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--green-dim);
+  white-space: nowrap;
+}
+.share-menu-item:last-child { border-bottom: none; }
+.share-menu-item:hover {
+  background: var(--green);
+  color: #000;
+}
+
 /* Map tooltip */
 .map-tooltip {
   position: absolute;

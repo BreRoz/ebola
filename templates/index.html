@@ -248,7 +248,13 @@
 
         <!-- Share button — top right -->
         <button id="map-share-btn" class="map-overlay-btn" style="top:10px;right:10px" onclick="shareTracker()">[ &#x2197; SHARE ]</button>
-        <div id="map-share-confirm" style="display:none;position:absolute;top:40px;right:10px;background:#000;border:1px solid var(--green);color:var(--green);font-family:var(--font-mono);font-size:10px;padding:4px 10px;">LINK COPIED ✓</div>
+        <div id="map-share-menu" style="display:none;position:absolute;top:38px;right:10px;background:#000;border:1px solid var(--green);z-index:200;min-width:150px;">
+          <div class="share-menu-item" onclick="shareVia('twitter')">𝕏 &nbsp;Post on X</div>
+          <div class="share-menu-item" onclick="shareVia('facebook')">&#x2219; Facebook</div>
+          <div class="share-menu-item" onclick="shareVia('whatsapp')">&#x2219; WhatsApp</div>
+          <div class="share-menu-item" onclick="shareVia('reddit')">&#x2219; Reddit</div>
+          <div class="share-menu-item" id="map-copy-btn" onclick="shareVia('copy')">[ COPY LINK ]</div>
+        </div>
 
         <!-- Support button — bottom right -->
         <a href="/support" onclick="track('support_click')" class="map-overlay-btn" style="bottom:10px;right:10px;text-decoration:none">[ &#9608; SUPPORT ]</a>

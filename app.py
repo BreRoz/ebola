@@ -113,6 +113,16 @@ Built and maintained by HoursandCo (https://hoursand.co). Data sourced from WHO 
     return Response(txt, mimetype="text/plain")
 
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("500.html"), 500
+
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5001))
     app.run(debug=False, host="0.0.0.0", port=port)

@@ -1,20 +1,40 @@
-// ── Share ──────────────────────────────────────────────────────────────
+// ── Share dropdown ─────────────────────────────────────────────────────
 function shareTracker() {
-  const url  = 'https://ebola.fyi';
-  const text = 'Live Ebola outbreak tracker — 2026 Bundibugyo strain, DRC & Uganda. Free, no paywall.';
-  if (navigator.share) {
-    navigator.share({ title: 'Ebola Outbreak Tracker', text, url })
-      .then(() => track('share', { method: 'native' }))
-      .catch(() => {});
+  const menu = document.getElementById('map-share-menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+
+function shareVia(method) {
+  const url  = encodeURIComponent('https://ebola.fyi');
+  const text = encodeURIComponent('Live Ebola outbreak tracker — 2026 Bundibugyo strain, DRC & Uganda. Free, no paywall.');
+  const links = {
+    twitter:  `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    whatsapp: `https://wa.me/?text=${text}%20${url}`,
+    reddit:   `https://reddit.com/submit?url=${url}&title=${text}`,
+  };
+  if (links[method]) {
+    window.open(links[method], '_blank', 'noopener,width=600,height=450');
+    track('share', { method });
   } else {
-    navigator.clipboard.writeText(url).then(() => {
-      const confirm = document.getElementById('map-share-confirm');
-      confirm.style.display = 'block';
-      setTimeout(() => { confirm.style.display = 'none'; }, 2000);
+    navigator.clipboard.writeText('https://ebola.fyi').then(() => {
+      const btn = document.getElementById('map-copy-btn');
+      btn.textContent = 'COPIED ✓';
+      setTimeout(() => { btn.textContent = '[ COPY LINK ]'; }, 2000);
       track('share', { method: 'clipboard' });
     });
   }
+  document.getElementById('map-share-menu').style.display = 'none';
 }
+
+// Close share menu if clicking outside
+document.addEventListener('click', e => {
+  const menu = document.getElementById('map-share-menu');
+  const btn  = document.getElementById('map-share-btn');
+  if (menu && !menu.contains(e.target) && e.target !== btn) {
+    menu.style.display = 'none';
+  }
+});
 
 // ── Analytics helper ───────────────────────────────────────────────────
 function track(event, params) {
@@ -80,6 +100,16 @@ const SitNav = {
 
   const path = d3.geoPath().projection(projection);
 
+  // Zoom & pan
+  const mapG = svg.append('g');
+  const zoom = d3.zoom()
+    .scaleExtent([1, 8])
+    .translateExtent([[0, 0], [w, h]])
+    .on('zoom', (event) => {
+      mapG.attr('transform', event.transform);
+    });
+  svg.call(zoom);
+
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
     'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK', cases: '600+ susp / 51 conf / 139 dead' },
@@ -110,7 +140,7 @@ const SitNav = {
     .then(world => {
       if (loadingEl) loadingEl.style.display = 'none';
 
-      svg.selectAll('path')
+      mapG.selectAll('path')
         .data(world.features)
         .enter()
         .append('path')

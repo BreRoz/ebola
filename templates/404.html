@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | ebola.fyi</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="stylesheet" href="/static/css/dos.css">
+  <style>
+    html, body { height: 100%; overflow: auto; }
+    .error-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .error-box {
+      border: 1px solid var(--green);
+      background: var(--bg-panel);
+      max-width: 560px;
+      width: 100%;
+      padding: 36px 40px;
+      text-align: center;
+    }
+    .error-code {
+      font-family: var(--font-vt);
+      font-size: 96px;
+      color: var(--red);
+      line-height: 1;
+      letter-spacing: 4px;
+    }
+    .error-label {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-dim);
+      margin: 6px 0 24px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .error-msg {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--green);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .error-blink {
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    .error-back {
+      display: inline-block;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 8px 20px;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      transition: background 0.1s, color 0.1s;
+    }
+    .error-back:hover { background: var(--green); color: #000; }
+  </style>
+</head>
+<body>
+  <div class="error-wrap">
+    <div class="error-box">
+      <div class="error-code">404</div>
+      <div class="error-label">FILE NOT FOUND</div>
+      <div class="error-msg">
+        C:\EBOLA&gt; LOAD PAGE...<br>
+        <span style="color:var(--red)">ERROR:</span> The requested file does not exist on this system.<br>
+        Check the URL and try again. <span class="error-blink">█</span>
+      </div>
+      <a href="/" class="error-back">[ ← RETURN TO TRACKER ]</a>
+    </div>
+  </div>
+</body>
+</html>
