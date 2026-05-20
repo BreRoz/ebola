@@ -497,3 +497,157 @@ body::before {
 ::-webkit-scrollbar-track { background: #000; }
 ::-webkit-scrollbar-thumb { background: var(--green-dim); }
 ::-webkit-scrollbar-thumb:hover { background: var(--green); }
+
+/* ── Mobile responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Allow natural page scroll on mobile */
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
+
+  /* App shell flows naturally */
+  .app-shell {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Header: stack title and timestamp */
+  .site-header {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 10px;
+    gap: 1px;
+  }
+
+  .site-header-title {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .site-header-right {
+    font-size: 10px;
+    opacity: 0.65;
+  }
+
+  /* Tab bar: equal-width buttons */
+  .tab-bar { padding: 0; }
+
+  .tab-btn {
+    flex: 1;
+    padding: 8px 4px;
+    font-size: 11px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+
+  /* Tab pane: natural flow */
+  .tab-pane {
+    overflow: visible;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+
+  /* Panel layout: stack vertically */
+  .panel-layout {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  /* Left panel: full width, natural height */
+  .left-panel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    overflow-y: visible;
+    padding: 8px 0;
+  }
+
+  /* Map: fixed height on mobile */
+  .map-panel {
+    height: 280px;
+    flex: none;
+  }
+
+  /* Situation tab: nav items horizontal scroll */
+  #tab-situation .left-panel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 0;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sit-nav-item {
+    flex-shrink: 0;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+    padding: 8px 10px;
+    min-width: 130px;
+  }
+
+  .sit-nav-item.selected {
+    border-left: none;
+    border-top: 3px solid var(--green-bright);
+  }
+
+  .sit-nav-item .sit-sub { white-space: normal; }
+
+  /* Situation content: natural scroll */
+  .sit-content {
+    overflow-y: visible;
+  }
+
+  /* Data rows: stack label above value */
+  .data-row {
+    flex-direction: column;
+    gap: 1px;
+    padding: 6px 0;
+  }
+
+  .data-row .dr-label {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .data-row .dr-value {
+    font-size: 12px;
+    padding-left: 4px;
+  }
+
+  /* Info tab */
+  .info-wrap {
+    padding: 14px 16px;
+    max-width: 100%;
+  }
+
+  /* Strain comparison: single column */
+  .info-compare {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: single line, shorter */
+  .site-footer {
+    height: auto;
+    padding: 5px 10px;
+    font-size: 9px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  /* Modal: full-width on small screens */
+  .modal-box {
+    width: 95%;
+  }
+
+}
