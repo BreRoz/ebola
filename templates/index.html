@@ -245,6 +245,13 @@
         <div id="map-loading" class="map-loading">LOADING MAP DATA<span class="cursor">_</span></div>
         <div id="world-map"></div>
         <div id="map-tooltip" class="map-tooltip"></div>
+
+        <!-- Share button — top right -->
+        <button id="map-share-btn" class="map-overlay-btn" style="top:10px;right:10px" onclick="shareTracker()">[ &#x2197; SHARE ]</button>
+        <div id="map-share-confirm" style="display:none;position:absolute;top:40px;right:10px;background:#000;border:1px solid var(--green);color:var(--green);font-family:var(--font-mono);font-size:10px;padding:4px 10px;">LINK COPIED ✓</div>
+
+        <!-- Support button — bottom right -->
+        <a href="/support" onclick="track('support_click')" class="map-overlay-btn" style="bottom:10px;right:10px;text-decoration:none">[ &#9608; SUPPORT ]</a>
       </div>
 
     </div>

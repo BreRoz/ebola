@@ -1,3 +1,21 @@
+// ── Share ──────────────────────────────────────────────────────────────
+function shareTracker() {
+  const url  = 'https://ebola.fyi';
+  const text = 'Live Ebola outbreak tracker — 2026 Bundibugyo strain, DRC & Uganda. Free, no paywall.';
+  if (navigator.share) {
+    navigator.share({ title: 'Ebola Outbreak Tracker', text, url })
+      .then(() => track('share', { method: 'native' }))
+      .catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => {
+      const confirm = document.getElementById('map-share-confirm');
+      confirm.style.display = 'block';
+      setTimeout(() => { confirm.style.display = 'none'; }, 2000);
+      track('share', { method: 'clipboard' });
+    });
+  }
+}
+
 // ── Analytics helper ───────────────────────────────────────────────────
 function track(event, params) {
   if (typeof gtag !== 'undefined') gtag('event', event, params || {});

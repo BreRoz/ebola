@@ -254,6 +254,27 @@ body::before {
   letter-spacing: 0.1em;
 }
 
+/* Map overlay buttons */
+.map-overlay-btn {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  border: 1px solid var(--green);
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  z-index: 50;
+  transition: background 0.1s, color 0.1s;
+  backdrop-filter: blur(2px);
+}
+
+.map-overlay-btn:hover {
+  background: var(--green);
+  color: #000;
+}
+
 /* Map tooltip */
 .map-tooltip {
   position: absolute;
