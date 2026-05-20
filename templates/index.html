@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebola Outbreak Tracker — 2026 Bundibugyo Strain</title>
+  <meta name="description" content="Live tracker for the 2026 Ebola Bundibugyo outbreak in DRC and Uganda. WHO declared PHEIC May 17. 131+ deaths, 513+ suspected cases. Independent, free, no paywall.">
+  <link rel="canonical" href="https://ebola.breroz.com/">
+  <link rel="stylesheet" href="/static/css/dos.css">
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+
+<!-- ── Disclaimer Modal ──────────────────────────────────────────────── -->
+<div id="disclaimer-modal" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-titlebar">
+      <span>&#x2588; NOTICE</span>
+      <span>[ ebola-tracker v1.0 ]</span>
+    </div>
+    <div class="modal-body">
+      <p><strong>UNOFFICIAL TRACKER</strong></p>
+      <p>Data compiled from WHO situation reports, Africa CDC, Reuters, and verified news sources. This is not an official public health resource.</p>
+      <p style="margin-top:10px" class="warn">&#x26A0; If you have symptoms or believe you have been exposed, contact your local health authority immediately.</p>
+      <p style="margin-top:10px">Last updated: <strong>May 19, 2026</strong></p>
+    </div>
+    <div class="modal-footer">
+      <button id="disclaimer-close" class="btn-dos">[ ACKNOWLEDGE ]</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── App Shell ─────────────────────────────────────────────────────── -->
+<div class="app-shell">
+
+  <!-- Header -->
+  <div class="site-header">
+    <div class="site-header-title">
+      &#x2588; EBOLA OUTBREAK TRACKER // BUNDIBUGYO STRAIN // DRC &amp; UGANDA 2026 <span class="cursor">_</span>
+    </div>
+    <div class="site-header-right">WHO PHEIC DECLARED &nbsp;|&nbsp; MAY 17, 2026</div>
+  </div>
+
+  <!-- Tab bar -->
+  <nav class="tab-bar">
+    <button class="tab-btn active" data-tab="map">[ MAP ]</button>
+    <button class="tab-btn" data-tab="situation">[ SITUATION ]</button>
+    <button class="tab-btn" data-tab="info">[ INFO ]</button>
+  </nav>
+
+  <!-- ── TAB 1: MAP ─────────────────────────────────────────────────── -->
+  <div class="tab-pane active" id="tab-map">
+    <div class="panel-layout">
+
+      <!-- Left: stats + country list + updates -->
+      <div class="left-panel">
+        <div class="left-section-title">&gt; OUTBREAK STATUS</div>
+
+        <div class="stat-row">
+          <span class="stat-label">Suspected Cases</span>
+          <span class="stat-value danger">513+</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Confirmed Deaths</span>
+          <span class="stat-value danger">131+</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Lab Confirmed</span>
+          <span class="stat-value warn">8</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Case Fatality</span>
+          <span class="stat-value danger">~25%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Strain</span>
+          <span class="stat-value">Bundibugyo</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">WHO Status</span>
+          <span class="stat-value warn">PHEIC</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">PHEIC Declared</span>
+          <span class="stat-value">2026-05-17</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Vaccine</span>
+          <span class="stat-value danger">NONE approved</span>
+        </div>
+
+        <div class="left-section-title" style="margin-top:10px">&gt; BY COUNTRY</div>
+        <div class="dos-list">
+          <div class="dos-list-item">
+            <span class="country-name">DRC (Ituri)</span>
+            <span class="country-stat">513s / 131d</span>
+          </div>
+          <div class="dos-list-item">
+            <span class="country-name">Uganda (Kampala)</span>
+            <span class="country-stat">2c / 1d</span>
+          </div>
+          <div class="dos-list-item">
+            <span class="country-name">Germany (treatment)</span>
+            <span class="country-stat">1 (US mssnry)</span>
+          </div>
+          <div class="dos-list-item">
+            <span class="country-name">Czech Republic</span>
+            <span class="country-stat">1 (monitoring)</span>
+          </div>
+        </div>
+        <div style="font-size:9px;color:var(--text-faint);padding:4px 12px">s=suspected c=confirmed d=deaths</div>
+
+        <div class="left-section-title" style="margin-top:10px">&gt; RECENT UPDATES</div>
+        <div class="update-item">
+          <span class="update-date">2026-05-19</span>
+          US missionary Peter Stafford airlifted to Berlin Charit&eacute; Hospital
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-19</span>
+          6 high-risk US contacts traveling to Germany + Czech Republic
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-19</span>
+          US funds 50 treatment clinics in DRC/Uganda via CERF/OCHA
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-18</span>
+          US CDC travel restrictions: DRC, Uganda, South Sudan (21-day)
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-17</span>
+          WHO declares PHEIC — Bundibugyo strain, DRC &amp; Uganda
+        </div>
+      </div>
+
+      <!-- Right: world map -->
+      <div class="map-panel">
+        <div id="map-loading" class="map-loading">LOADING MAP DATA<span class="cursor">_</span></div>
+        <div id="world-map"></div>
+        <div id="map-tooltip" class="map-tooltip"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── TAB 2: SITUATION ───────────────────────────────────────────── -->
+  <div class="tab-pane" id="tab-situation">
+    <div class="panel-layout">
+
+      <!-- Left: nav -->
+      <div class="left-panel">
+        <div class="left-section-title">&gt; SELECT LOCATION</div>
+        <div class="sit-nav-item selected" data-sit="drc" onclick="SitNav.select('drc')">
+          <div class="sit-label">&#x1F1E8;&#x1F1E9; DRC &mdash; Ituri Province</div>
+          <div class="sit-sub danger">ACTIVE OUTBREAK &bull; 513 suspected &bull; 131 dead</div>
+        </div>
+        <div class="sit-nav-item" data-sit="uga" onclick="SitNav.select('uga')">
+          <div class="sit-label">&#x1F1FA;&#x1F1EC; Uganda &mdash; Kampala</div>
+          <div class="sit-sub warn">2 confirmed &bull; 1 dead &bull; travelers from DRC</div>
+        </div>
+        <div class="sit-nav-item" data-sit="stafford" onclick="SitNav.select('stafford')">
+          <div class="sit-label">&#x1F1FA;&#x1F1F8; Peter Stafford &mdash; US Missionary</div>
+          <div class="sit-sub warn">Inbound to Berlin Charit&eacute; Hospital</div>
+        </div>
+        <div class="sit-nav-item" data-sit="uscontacts" onclick="SitNav.select('uscontacts')">
+          <div class="sit-label">&#x1F1FA;&#x1F1F8; US High-Risk Contacts</div>
+          <div class="sit-sub">6 contacts &bull; Germany + Czech Republic</div>
+        </div>
+        <div class="sit-nav-item" data-sit="usresponse" onclick="SitNav.select('usresponse')">
+          <div class="sit-label">&#x1F1FA;&#x1F1F8; US Response</div>
+          <div class="sit-sub">CDC &bull; State Dept &bull; Travel restrictions</div>
+        </div>
+      </div>
+
+      <!-- Right: content panes -->
+      <div style="flex:1;overflow:hidden;position:relative">
+
+        <div id="sit-drc" class="sit-content active">
+          <div class="sit-content-inner">
+            <div class="sit-content-title">&gt; DRC &mdash; ITURI PROVINCE &mdash; ACTIVE OUTBREAK</div>
+            <div class="data-row"><span class="dr-label">Suspected cases</span><span class="dr-value danger bright">513+</span></div>
+            <div class="data-row"><span class="dr-label">Lab confirmed</span><span class="dr-value warn">8</span></div>
+            <div class="data-row"><span class="dr-label">Deaths</span><span class="dr-value danger bright">131+</span></div>
+            <div class="data-row"><span class="dr-label">Case fatality rate</span><span class="dr-value danger">~25%</span></div>
+            <div class="data-row"><span class="dr-label">Virus strain</span><span class="dr-value bright">Bundibugyo virus (BDBV)</span></div>
+            <div class="data-row"><span class="dr-label">Approved vaccine</span><span class="dr-value danger">NONE for Bundibugyo</span></div>
+            <div class="data-row"><span class="dr-label">Active health zones</span><span class="dr-value">Bunia &bull; Rwampara &bull; Mongbwalu</span></div>
+            <div class="data-row"><span class="dr-label">WHO status</span><span class="dr-value warn">PHEIC declared May 17, 2026</span></div>
+            <div class="data-row"><span class="dr-label">Sample positivity</span><span class="dr-value danger">HIGH &mdash; real scale likely larger than reported</span></div>
+            <div class="sit-note">
+              The Bundibugyo strain has no approved vaccine or therapeutic. Unlike the more common Zaire strain (which has the rVSV-ZEBOV / Ervebo vaccine), Bundibugyo response relies entirely on supportive care, isolation, and contact tracing. WHO and Africa CDC have called for aggressive outbreak control at source rather than travel restrictions.
+            </div>
+            <div class="sit-note" style="margin-top:10px">
+              A working theory is that the index case may have been exposed to rodents during a bird-watching trip. WHO genetic sequencing is underway to establish origin.
+            </div>
+          </div>
+        </div>
+
+        <div id="sit-uga" class="sit-content">
+          <div class="sit-content-inner">
+            <div class="sit-content-title">&gt; UGANDA &mdash; KAMPALA</div>
+            <div class="data-row"><span class="dr-label">Confirmed cases</span><span class="dr-value warn">2</span></div>
+            <div class="data-row"><span class="dr-label">Deaths</span><span class="dr-value danger">1</span></div>
+            <div class="data-row"><span class="dr-label">Source</span><span class="dr-value">Travelers from DRC</span></div>
+            <div class="data-row"><span class="dr-label">Location</span><span class="dr-value">Kampala</span></div>
+            <div class="data-row"><span class="dr-label">Status</span><span class="dr-value warn">Monitoring underway</span></div>
+            <div class="data-row"><span class="dr-label">US CDC staff in Uganda</span><span class="dr-value bright">100 personnel</span></div>
+            <div class="sit-note">
+              Both confirmed cases in Uganda involve individuals who traveled from DRC. Uganda has significant CDC presence &mdash; 100 US CDC staff in-country providing disease tracking, contact tracing, specimen collection and viral sequencing support.
+            </div>
+          </div>
+        </div>
+
+        <div id="sit-stafford" class="sit-content">
+          <div class="sit-content-inner">
+            <div class="sit-content-title">&gt; PETER STAFFORD &mdash; US MISSIONARY</div>
+            <div class="data-row"><span class="dr-label">Identity</span><span class="dr-value bright">Peter Stafford</span></div>
+            <div class="data-row"><span class="dr-label">Affiliation</span><span class="dr-value">Serge Christian mission organization</span></div>
+            <div class="data-row"><span class="dr-label">Nationality</span><span class="dr-value">US citizen</span></div>
+            <div class="data-row"><span class="dr-label">Where contracted</span><span class="dr-value danger">DRC (Democratic Republic of Congo)</span></div>
+            <div class="data-row"><span class="dr-label">Treatment destination</span><span class="dr-value bright">Charit&eacute; University Hospital, Berlin</span></div>
+            <div class="data-row"><span class="dr-label">Charit&eacute; ward</span><span class="dr-value">Special isolation ward &mdash; largest university hospital in Berlin</span></div>
+            <div class="data-row"><span class="dr-label">Authorization</span><span class="dr-value">US requested Germany's assistance &bull; Germany health ministry confirmed</span></div>
+            <div class="data-row"><span class="dr-label">Status (May 19)</span><span class="dr-value warn">In transit to Germany</span></div>
+            <div class="sit-note">
+              Stafford is the first identified US citizen to contract the Bundibugyo strain in this outbreak. The decision to treat in Germany reflects Germany's network of experts for highly infectious disease management and available isolation capacity.
+            </div>
+            <div class="sit-quote">
+              "Arrangements are currently being made to admit and treat the patient in Germany." &mdash; German Health Ministry spokesperson
+            </div>
+          </div>
+        </div>
+
+        <div id="sit-uscontacts" class="sit-content">
+          <div class="sit-content-inner">
+            <div class="sit-content-title">&gt; US HIGH-RISK CONTACTS</div>
+            <div class="data-row"><span class="dr-label">Total contacts</span><span class="dr-value warn">6</span></div>
+            <div class="data-row"><span class="dr-label">Germany</span><span class="dr-value">5 contacts &bull; quarantine during monitoring</span></div>
+            <div class="data-row"><span class="dr-label">Czech Republic</span><span class="dr-value">1 contact &bull; monitoring</span></div>
+            <div class="data-row"><span class="dr-label">Travel status (May 19)</span><span class="dr-value">Finalizing travel plans to Europe</span></div>
+            <div class="data-row"><span class="dr-label">CDC incident manager</span><span class="dr-value">Dr. Satish Pillai</span></div>
+            <div class="sit-quote">
+              "The individuals are traveling to Europe, including in Germany, and they will be in quarantine during their monitoring period." &mdash; Dr. Satish Pillai, CDC Ebola incident manager
+            </div>
+            <div class="sit-note">
+              These are individuals considered high-risk contacts of Peter Stafford or others infected in DRC. Choosing Europe for their monitoring period rather than the US reflects logistical proximity to where they were when exposed.
+            </div>
+          </div>
+        </div>
+
+        <div id="sit-usresponse" class="sit-content">
+          <div class="sit-content-inner">
+            <div class="sit-content-title">&gt; US RESPONSE</div>
+            <div class="data-row"><span class="dr-label">Travel restrictions</span><span class="dr-value warn">DRC &bull; Uganda &bull; South Sudan &mdash; 21-day rule</span></div>
+            <div class="data-row"><span class="dr-label">Restrictions issued</span><span class="dr-value">May 18, 2026 (CDC + DHS)</span></div>
+            <div class="data-row"><span class="dr-label">Treatment clinics</span><span class="dr-value bright">50 clinics funded in DRC, Uganda, Congo</span></div>
+            <div class="data-row"><span class="dr-label">Funding channel</span><span class="dr-value">CERF / OCHA (UN humanitarian fund)</span></div>
+            <div class="data-row"><span class="dr-label">CDC staff in DRC</span><span class="dr-value">30 personnel (country office)</span></div>
+            <div class="data-row"><span class="dr-label">CDC staff in Uganda</span><span class="dr-value">100 personnel</span></div>
+            <div class="data-row"><span class="dr-label">Diagnostic tests</span><span class="dr-value bright">Current tests effective for Bundibugyo strain</span></div>
+            <div class="sit-note" style="border-color:rgba(255,170,0,0.4)">
+              Africa CDC Director General Dr. Jean Kaseya criticized US travel restrictions: <em>"Travel restrictions are not a solution and could potentially increase the risk rather than reducing it. The fastest path to protecting all countries in the world is to aggressively support outbreak control at the source. Global health security cannot be achieved through borders alone."</em>
+            </div>
+            <div class="sit-note" style="margin-top:10px">
+              Public health experts note that cuts to US CDC under the Trump administration and the official US withdrawal from WHO may hamper response coordination. CDC is providing remote and on-the-ground assistance including disease tracking, contact tracing, specimen collection and viral sequencing.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: INFO ────────────────────────────────────────────────── -->
+  <div class="tab-pane" id="tab-info">
+    <div class="info-wrap">
+
+      <div class="info-section">
+        <div class="info-section-title">&gt; ABOUT THIS OUTBREAK</div>
+        <p>The 2026 Ituri Province Ebola epidemic began in eastern Democratic Republic of Congo and is caused by the <strong>Bundibugyo virus (BDBV)</strong>, a rare strain of the Ebola family. As of May 19, 2026, over 513 suspected cases and 131 deaths have been reported across at least three health zones in Ituri Province. Two confirmed cases have spread to Kampala, Uganda.</p>
+        <p>The WHO declared this a <strong>Public Health Emergency of International Concern (PHEIC)</strong> on May 17, 2026 — the highest level of global health alert. The outbreak does not currently meet criteria for a pandemic emergency.</p>
+        <p>A working theory is that the index case was exposed to infected animals during a wildlife trip. WHO genetic sequencing is underway to pinpoint the origin.</p>
+      </div>
+
+      <div class="info-section">
+        <div class="info-section-title">&gt; EBOLA STRAINS &mdash; BUNDIBUGYO vs. ZAIRE</div>
+        <p>There are six known species of Ebola virus. The two most significant in terms of outbreaks are Bundibugyo and Zaire.</p>
+        <div class="info-compare">
+          <div class="info-compare-box">
+            <h4>Bundibugyo (BDBV) &mdash; THIS OUTBREAK</h4>
+            <div class="compare-row"><span>First identified</span> 2007, Uganda</div>
+            <div class="compare-row"><span>Approved vaccine</span> NONE</div>
+            <div class="compare-row"><span>Approved treatment</span> NONE</div>
+            <div class="compare-row"><span>CFR (historical)</span> ~25–35%</div>
+            <div class="compare-row"><span>Notable outbreaks</span> Uganda 2007, DRC 2012</div>
+            <div class="compare-row"><span>Human-to-human</span> Yes (close contact)</div>
+          </div>
+          <div class="info-compare-box">
+            <h4>Zaire (EBOV) &mdash; most common</h4>
+            <div class="compare-row"><span>First identified</span> 1976, DRC</div>
+            <div class="compare-row"><span>Approved vaccine</span> Ervebo (rVSV-ZEBOV)</div>
+            <div class="compare-row"><span>Approved treatment</span> Inmazeb, Ebanga</div>
+            <div class="compare-row"><span>CFR (historical)</span> ~50–90% untreated</div>
+            <div class="compare-row"><span>Notable outbreaks</span> W. Africa 2014–16, DRC 2018–20</div>
+            <div class="compare-row"><span>Human-to-human</span> Yes (close contact)</div>
+          </div>
+        </div>
+        <p style="margin-top:12px">The lack of any approved vaccine or therapeutic for the Bundibugyo strain makes this outbreak significantly harder to control than recent Zaire-strain outbreaks.</p>
+      </div>
+
+      <div class="info-section">
+        <div class="info-section-title">&gt; VIRUS BASICS</div>
+        <p><strong>Transmission:</strong> Ebola spreads through direct contact with blood, secretions, organs or other bodily fluids of infected people or animals. Fruit bats are the natural reservoir. It does NOT spread through air, water or casual contact.</p>
+        <p><strong>Incubation period:</strong> 2 to 21 days from exposure to symptom onset.</p>
+        <p><strong>Symptoms:</strong> Sudden fever, fatigue, muscle pain, headache, sore throat — followed by vomiting, diarrhea, rash, impaired kidney and liver function, and in some cases internal and external bleeding.</p>
+        <p><strong>Pandemic potential:</strong> Low. Ebola does not spread through respiratory routes, limiting pandemic risk. However, it can spread rapidly in healthcare settings without proper PPE.</p>
+      </div>
+
+      <div class="info-section">
+        <div class="info-section-title">&gt; OFFICIAL SOURCES</div>
+        <p>
+          &bull; <a href="https://www.who.int/emergencies" target="_blank" rel="noopener">WHO Emergency Response</a><br>
+          &bull; <a href="https://africacdc.org" target="_blank" rel="noopener">Africa CDC (Africa Centres for Disease Control)</a><br>
+          &bull; <a href="https://www.cdc.gov/ebola" target="_blank" rel="noopener">US CDC &mdash; Ebola</a><br>
+          &bull; <a href="https://www.ecdc.europa.eu" target="_blank" rel="noopener">ECDC (European Centre for Disease Prevention)</a><br>
+          &bull; <a href="https://reliefweb.int" target="_blank" rel="noopener">ReliefWeb &mdash; humanitarian data</a>
+        </p>
+      </div>
+
+      <div class="info-section">
+        <div class="info-section-title">&gt; ABOUT THIS TRACKER</div>
+        <p>Free and independent. No paywall, no subscription. Data sourced from WHO situation reports, Africa CDC, Reuters, AP and verified news sources. Updated manually as new information becomes available.</p>
+        <p>Built by <a href="https://hoursandco.com" target="_blank" rel="noopener">HoursandCo</a>. If this has been useful to you, a tip is appreciated but never required.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <span>EBOLA OUTBREAK TRACKER v1.0 // DATA: WHO &middot; AFRICA CDC &middot; REUTERS // BUILT BY HOURSANDCO</span>
+    <span>UNOFFICIAL &mdash; NOT A PUBLIC HEALTH AUTHORITY</span>
+  </div>
+
+</div><!-- /.app-shell -->
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "last_updated": "2026-05-19",
+  "summary": {
+    "suspected_cases": 513,
+    "confirmed_cases": 8,
+    "deaths": 131,
+    "countries_affected": ["DRC", "Uganda"],
+    "strain": "Bundibugyo",
+    "who_status": "PHEIC",
+    "pheic_date": "2026-05-17",
+    "cfr_pct": 25
+  },
+  "countries": [
+    {
+      "id": "COD",
+      "name": "DR Congo",
+      "region": "Ituri Province",
+      "suspected": 513,
+      "confirmed": 8,
+      "deaths": 131,
+      "status": "active",
+      "health_zones": ["Bunia", "Rwampara", "Mongbwalu"]
+    },
+    {
+      "id": "UGA",
+      "name": "Uganda",
+      "region": "Kampala",
+      "suspected": 2,
+      "confirmed": 2,
+      "deaths": 1,
+      "status": "confirmed",
+      "health_zones": ["Kampala"]
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-05-19",
+      "text": "US missionary Peter Stafford airlifted to Berlin Charite Hospital for treatment"
+    },
+    {
+      "date": "2026-05-19",
+      "text": "6 high-risk US contacts traveling to Germany and Czech Republic for monitoring"
+    },
+    {
+      "date": "2026-05-19",
+      "text": "US State Dept funding 50 treatment clinics in DRC and Uganda via CERF/OCHA"
+    },
+    {
+      "date": "2026-05-17",
+      "text": "WHO declares PHEIC — Bundibugyo strain, DRC and Uganda"
+    },
+    {
+      "date": "2026-05-18",
+      "text": "US CDC imposes travel restrictions for DRC, Uganda, South Sudan (21-day)"
+    }
+  ]
+}
