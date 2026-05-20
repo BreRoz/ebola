@@ -34,7 +34,33 @@ document.addEventListener('click', e => {
   if (menu && !menu.contains(e.target) && e.target !== btn) {
     menu.style.display = 'none';
   }
+
+  const smenu = document.getElementById('map-support-menu');
+  const sbtn  = document.getElementById('map-support-btn');
+  if (smenu && !smenu.contains(e.target) && e.target !== sbtn) {
+    smenu.style.display = 'none';
+  }
 });
+
+// ── Support dropdown ───────────────────────────────────────────────────
+function supportTracker() {
+  const menu = document.getElementById('map-support-menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  track('support_menu_open');
+}
+
+function supportVia(method) {
+  const links = {
+    coffee: 'https://buymeacoffee.com/breroz',
+    venmo:  'https://venmo.com/u/BreRoz',
+    paypal: 'https://paypal.me/breroz',
+  };
+  if (links[method]) {
+    window.open(links[method], '_blank', 'noopener,width=600,height=500');
+    track('support_click', { method });
+  }
+  document.getElementById('map-support-menu').style.display = 'none';
+}
 
 // ── Analytics helper ───────────────────────────────────────────────────
 function track(event, params) {
