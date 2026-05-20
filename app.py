@@ -7,7 +7,7 @@ import json
 import os
 from datetime import datetime
 
-from flask import Flask, jsonify, render_template, Response
+from flask import Flask, jsonify, render_template, Response, request
 from flask_compress import Compress
 
 app = Flask(__name__)
@@ -111,6 +111,50 @@ Built and maintained by HoursandCo (https://hoursand.co). Data sourced from WHO 
 - The WHO has expressed deep concern about the scale and speed of the outbreak
 """
     return Response(txt, mimetype="text/plain")
+
+
+@app.route("/api/feedback", methods=["POST"])
+def post_feedback():
+    data = request.get_json(silent=True) or {}
+    message = str(data.get("message", "")).strip()[:1000]
+    if not message:
+        return jsonify({"error": "empty"}), 400
+    path = os.path.join(DATA_DIR, "feedback.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            entries = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        entries = []
+    entries.append({"ts": datetime.utcnow().isoformat(), "msg": message})
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(entries, f, indent=2, ensure_ascii=False)
+    return jsonify({"ok": True})
+
+
+@app.route("/feedback")
+def view_feedback():
+    if request.args.get("key") != "hoursandco2026":
+        return Response("Unauthorized", status=401)
+    path = os.path.join(DATA_DIR, "feedback.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            entries = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        entries = []
+    rows = "".join(
+        f"<tr><td style='color:#007700;padding:4px 12px 4px 0'>{e['ts']}</td>"
+        f"<td style='color:#00cc00'>{e['msg']}</td></tr>"
+        for e in reversed(entries)
+    )
+    html = f"""<!DOCTYPE html><html><head><meta charset='UTF-8'>
+    <title>Feedback — ebola.fyi</title>
+    <style>body{{background:#0a0a0a;color:#00cc00;font-family:'Courier New',monospace;padding:40px}}
+    h2{{margin-bottom:20px}}td{{vertical-align:top;padding-bottom:8px}}
+    </style></head><body>
+    <h2>&gt; FEEDBACK LOG — {len(entries)} submission(s)</h2>
+    <table>{'<tr><td style="color:#007700">no submissions yet</td></tr>' if not entries else rows}</table>
+    </body></html>"""
+    return Response(html, mimetype="text/html")
 
 
 @app.errorhandler(404)

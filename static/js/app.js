@@ -40,7 +40,49 @@ document.addEventListener('click', e => {
   if (smenu && !smenu.contains(e.target) && e.target !== sbtn) {
     smenu.style.display = 'none';
   }
+
+  const fmenu = document.getElementById('map-feedback-menu');
+  const fbtn  = document.getElementById('map-feedback-btn');
+  if (fmenu && !fmenu.contains(e.target) && e.target !== fbtn) {
+    fmenu.style.display = 'none';
+  }
 });
+
+// ── Feedback dropdown ─────────────────────────────────────────────────
+function feedbackTracker() {
+  const menu = document.getElementById('map-feedback-menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  if (menu.style.display === 'block') {
+    document.getElementById('feedback-text').focus();
+  }
+  track('feedback_menu_open');
+}
+
+function submitFeedback() {
+  const text = document.getElementById('feedback-text').value.trim();
+  if (!text) return;
+  const btn = document.getElementById('feedback-submit-btn');
+  btn.textContent = '[ SENDING... ]';
+  fetch('/api/feedback', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: text }),
+  })
+  .then(r => r.json())
+  .then(() => {
+    btn.textContent = '[ SENT ✓ ]';
+    document.getElementById('feedback-text').value = '';
+    track('feedback_submitted');
+    setTimeout(() => {
+      document.getElementById('map-feedback-menu').style.display = 'none';
+      btn.textContent = '[ SEND ]';
+    }, 1500);
+  })
+  .catch(() => {
+    btn.textContent = '[ ERROR — RETRY ]';
+    setTimeout(() => { btn.textContent = '[ SEND ]'; }, 2000);
+  });
+}
 
 // ── Support dropdown ───────────────────────────────────────────────────
 function supportTracker() {
