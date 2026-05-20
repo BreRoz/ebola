@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ebola Outbreak Tracker — 2026 Bundibugyo Strain</title>
-  <meta name="description" content="Live tracker for the 2026 Ebola Bundibugyo outbreak in DRC and Uganda. WHO declared PHEIC May 17. 134+ deaths, 536+ suspected cases. Independent, free, no paywall.">
+  <meta name="description" content="Live tracker for the 2026 Ebola Bundibugyo outbreak in DRC and Uganda. WHO declared PHEIC May 17. 139+ deaths, 600+ suspected cases. Independent, free, no paywall.">
   <link rel="canonical" href="https://ebola.breroz.com/">
   <link rel="stylesheet" href="/static/css/dos.css">
   <script src="https://d3js.org/d3.v7.min.js" defer></script>
@@ -23,7 +23,7 @@
       <p><strong>UNOFFICIAL TRACKER</strong></p>
       <p>Data compiled from WHO situation reports, Africa CDC, Reuters, and verified news sources. This is not an official public health resource.</p>
       <p style="margin-top:10px" class="warn">&#x26A0; If you have symptoms or believe you have been exposed, contact your local health authority immediately.</p>
-      <p style="margin-top:10px">Last updated: <strong>May 19, 2026</strong></p>
+      <p style="margin-top:10px">Last updated: <strong>May 20, 2026</strong></p>
     </div>
     <div class="modal-footer">
       <button id="disclaimer-close" class="btn-dos">[ ACKNOWLEDGE ]</button>
@@ -59,19 +59,19 @@
 
         <div class="stat-row">
           <span class="stat-label">Suspected Cases</span>
-          <span class="stat-value danger">536+</span>
+          <span class="stat-value danger">600+</span>
         </div>
         <div class="stat-row">
           <span class="stat-label">Confirmed Deaths</span>
-          <span class="stat-value danger">134+</span>
+          <span class="stat-value danger">139+</span>
         </div>
         <div class="stat-row">
           <span class="stat-label">Lab Confirmed</span>
-          <span class="stat-value warn">34</span>
+          <span class="stat-value warn">51</span>
         </div>
         <div class="stat-row">
           <span class="stat-label">Case Fatality</span>
-          <span class="stat-value danger">~25%</span>
+          <span class="stat-value danger">30–50%</span>
         </div>
         <div class="stat-row">
           <span class="stat-label">Strain</span>
@@ -94,7 +94,7 @@
         <div class="dos-list">
           <div class="dos-list-item">
             <span class="country-name">DRC (Ituri)</span>
-            <span class="country-stat">536s / 134d</span>
+            <span class="country-stat">600s / 139d</span>
           </div>
           <div class="dos-list-item">
             <span class="country-name">Uganda (Kampala)</span>
@@ -112,6 +112,22 @@
         <div style="font-size:9px;color:var(--text-faint);padding:4px 12px">s=suspected c=confirmed d=deaths</div>
 
         <div class="left-section-title" style="margin-top:10px">&gt; RECENT UPDATES</div>
+        <div class="update-item">
+          <span class="update-date">2026-05-20 <a class="update-src" href="https://www.nbcnews.com/world/africa/ebola-cases-rise-congo-american-doctors-europe-treatment-vaccine-who-rcna346049" target="_blank" rel="noopener">[src]</a></span>
+          WHO: 600+ suspected cases, 139 deaths — "numbers will keep rising"
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-20 <a class="update-src" href="https://www.nbcnews.com/world/africa/ebola-cases-rise-congo-american-doctors-europe-treatment-vaccine-who-rcna346049" target="_blank" rel="noopener">[src]</a></span>
+          Stafford confirmed at Charit&eacute;; wife Dr. Rebekah Stafford + 4 children also in Germany
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-20 <a class="update-src" href="https://www.nbcnews.com/world/africa/ebola-cases-rise-congo-american-doctors-europe-treatment-vaccine-who-rcna346049" target="_blank" rel="noopener">[src]</a></span>
+          Cases confirmed in Goma — rebel-held city 230 miles from epicenter
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-20 <a class="update-src" href="https://www.npr.org/2026/05/20/g-s1-122971/who-chief-concerned-over-scale-and-speed-of-ebola-outbreak" target="_blank" rel="noopener">[src]</a></span>
+          WHO: 4-week detection gap; outbreak started ~2 months ago; first death April 24
+        </div>
         <div class="update-item">
           <span class="update-date">2026-05-19 <a class="update-src" href="https://www.aljazeera.com/news/2026/5/19/us-authorities-say-missionary-who-contracted-ebola-en-route-to-germany" target="_blank" rel="noopener">[src]</a></span>
           US missionary Peter Stafford airlifted to Berlin Charit&eacute; Hospital
@@ -153,7 +169,7 @@
         <div class="left-section-title">&gt; SELECT LOCATION</div>
         <div class="sit-nav-item selected" data-sit="drc" onclick="SitNav.select('drc')">
           <div class="sit-label">&#x1F1E8;&#x1F1E9; DRC &mdash; Ituri Province</div>
-          <div class="sit-sub danger">ACTIVE OUTBREAK &bull; 536 suspected &bull; 134 dead</div>
+          <div class="sit-sub danger">ACTIVE OUTBREAK &bull; 600+ suspected &bull; 139 dead</div>
         </div>
         <div class="sit-nav-item" data-sit="uga" onclick="SitNav.select('uga')">
           <div class="sit-label">&#x1F1FA;&#x1F1EC; Uganda &mdash; Kampala</div>
@@ -161,11 +177,11 @@
         </div>
         <div class="sit-nav-item" data-sit="stafford" onclick="SitNav.select('stafford')">
           <div class="sit-label">&#x1F1FA;&#x1F1F8; Peter Stafford &mdash; US Missionary</div>
-          <div class="sit-sub warn">Inbound to Berlin Charit&eacute; Hospital</div>
+          <div class="sit-sub warn">Admitted to Berlin Charit&eacute; &bull; wife + 4 children also in Germany</div>
         </div>
         <div class="sit-nav-item" data-sit="uscontacts" onclick="SitNav.select('uscontacts')">
           <div class="sit-label">&#x1F1FA;&#x1F1F8; US High-Risk Contacts</div>
-          <div class="sit-sub">6 contacts &bull; Germany + Czech Republic</div>
+          <div class="sit-sub">Dr. Rebekah Stafford + 4 children (Germany) &bull; Dr. LaRochelle (Prague)</div>
         </div>
         <div class="sit-nav-item" data-sit="usresponse" onclick="SitNav.select('usresponse')">
           <div class="sit-label">&#x1F1FA;&#x1F1F8; US Response</div>
@@ -179,21 +195,23 @@
         <div id="sit-drc" class="sit-content active">
           <div class="sit-content-inner">
             <div class="sit-content-title">&gt; DRC &mdash; ITURI PROVINCE &mdash; ACTIVE OUTBREAK</div>
-            <div class="data-row"><span class="dr-label">Suspected cases</span><span class="dr-value danger bright">536+</span></div>
-            <div class="data-row"><span class="dr-label">Probable cases</span><span class="dr-value warn">105</span></div>
-            <div class="data-row"><span class="dr-label">Lab confirmed</span><span class="dr-value warn">34</span></div>
-            <div class="data-row"><span class="dr-label">Deaths</span><span class="dr-value danger bright">134+</span></div>
-            <div class="data-row"><span class="dr-label">Case fatality rate</span><span class="dr-value danger">~25%</span></div>
+            <div class="data-row"><span class="dr-label">Suspected cases</span><span class="dr-value danger bright">600+</span></div>
+            <div class="data-row"><span class="dr-label">Lab confirmed</span><span class="dr-value warn">51</span></div>
+            <div class="data-row"><span class="dr-label">Deaths</span><span class="dr-value danger bright">139+</span></div>
+            <div class="data-row"><span class="dr-label">Case fatality rate</span><span class="dr-value danger">30–50%</span></div>
             <div class="data-row"><span class="dr-label">Virus strain</span><span class="dr-value bright">Bundibugyo virus (BDBV)</span></div>
             <div class="data-row"><span class="dr-label">Approved vaccine</span><span class="dr-value danger">NONE for Bundibugyo</span></div>
-            <div class="data-row"><span class="dr-label">Active health zones</span><span class="dr-value">Bunia &bull; Rwampara &bull; Mongbwalu</span></div>
+            <div class="data-row"><span class="dr-label">Active zones</span><span class="dr-value">Bunia &bull; Mongbwalu &bull; Nyakunde &bull; Goma &bull; Butembo</span></div>
+            <div class="data-row"><span class="dr-label">Spread distance</span><span class="dr-value danger">Cases in Goma — 230 miles from epicenter</span></div>
             <div class="data-row"><span class="dr-label">WHO status</span><span class="dr-value warn">PHEIC declared May 17, 2026</span></div>
-            <div class="data-row"><span class="dr-label">Sample positivity</span><span class="dr-value danger">HIGH &mdash; real scale likely larger than reported</span></div>
+            <div class="data-row"><span class="dr-label">First known death</span><span class="dr-value">April 24, 2026 — Bunia</span></div>
+            <div class="data-row"><span class="dr-label">Detection gap</span><span class="dr-value danger">~4 weeks undetected — tested for Zaire strain (negative)</span></div>
+            <div class="data-row"><span class="dr-label">Vaccine pipeline</span><span class="dr-value warn">Oxford/Serum Institute candidate — 2–3 months to clinical trials</span></div>
             <div class="sit-note">
-              The Bundibugyo strain has no approved vaccine or therapeutic. Unlike the more common Zaire strain (which has the rVSV-ZEBOV / Ervebo vaccine), Bundibugyo response relies entirely on supportive care, isolation, and contact tracing. WHO and Africa CDC have called for aggressive outbreak control at source rather than travel restrictions.
+              The Bundibugyo strain has no approved vaccine or therapeutic. Unlike the more common Zaire strain (which has the rVSV-ZEBOV / Ervebo vaccine), Bundibugyo response relies entirely on supportive care, isolation, and contact tracing. The outbreak went undetected for weeks because initial tests targeted the Zaire strain and came back negative.
             </div>
-            <div class="sit-note" style="margin-top:10px">
-              A working theory is that the index case may have been exposed to rodents during a bird-watching trip. WHO genetic sequencing is underway to establish origin.
+            <div class="sit-note" style="margin-top:10px;border-color:rgba(255,51,0,0.4)">
+              Cases have been confirmed in Goma — a rebel-held city of over 1 million people, 230 miles from the Ituri Province epicenter. WHO called this a major concern for regional spread.
             </div>
           </div>
         </div>
@@ -216,19 +234,16 @@
         <div id="sit-stafford" class="sit-content">
           <div class="sit-content-inner">
             <div class="sit-content-title">&gt; PETER STAFFORD &mdash; US MISSIONARY</div>
-            <div class="data-row"><span class="dr-label">Identity</span><span class="dr-value bright">Peter Stafford</span></div>
-            <div class="data-row"><span class="dr-label">Affiliation</span><span class="dr-value">Serge Christian mission organization</span></div>
-            <div class="data-row"><span class="dr-label">Nationality</span><span class="dr-value">US citizen</span></div>
-            <div class="data-row"><span class="dr-label">Where contracted</span><span class="dr-value danger">DRC (Democratic Republic of Congo)</span></div>
-            <div class="data-row"><span class="dr-label">Treatment destination</span><span class="dr-value bright">Charit&eacute; University Hospital, Berlin</span></div>
-            <div class="data-row"><span class="dr-label">Charit&eacute; ward</span><span class="dr-value">Special isolation ward &mdash; largest university hospital in Berlin</span></div>
-            <div class="data-row"><span class="dr-label">Authorization</span><span class="dr-value">US requested Germany's assistance &bull; Germany health ministry confirmed</span></div>
-            <div class="data-row"><span class="dr-label">Status (May 19)</span><span class="dr-value warn">In transit to Germany</span></div>
+            <div class="data-row"><span class="dr-label">Patient</span><span class="dr-value bright">Dr. Peter Stafford, 39 &mdash; general surgeon, burn care specialist</span></div>
+            <div class="data-row"><span class="dr-label">Affiliation</span><span class="dr-value">Serge Christian mission organization &bull; working in Bunia since 2023</span></div>
+            <div class="data-row"><span class="dr-label">How exposed</span><span class="dr-value danger">Operated on Ebola patient before outbreak was detected</span></div>
+            <div class="data-row"><span class="dr-label">Treatment</span><span class="dr-value bright">Charit&eacute; University Hospital, Berlin &mdash; isolation ward</span></div>
+            <div class="data-row"><span class="dr-label">Status (May 20)</span><span class="dr-value danger">Admitted &bull; symptomatic</span></div>
+            <div class="data-row"><span class="dr-label">Wife</span><span class="dr-value warn">Dr. Rebekah Stafford, 38 &mdash; also flown to Germany &bull; asymptomatic</span></div>
+            <div class="data-row"><span class="dr-label">Children</span><span class="dr-value">4 young children &mdash; also in Germany with mother</span></div>
+            <div class="data-row"><span class="dr-label">Dr. Patrick LaRochelle, 46</span><span class="dr-value warn">Exposed via 2nd patient &bull; flown to Bulovka Hospital, Prague &bull; asymptomatic</span></div>
             <div class="sit-note">
-              Stafford is the first identified US citizen to contract the Bundibugyo strain in this outbreak. The decision to treat in Germany reflects Germany's network of experts for highly infectious disease management and available isolation capacity.
-            </div>
-            <div class="sit-quote">
-              "Arrangements are currently being made to admit and treat the patient in Germany." &mdash; German Health Ministry spokesperson
+              Stafford is the first identified US citizen to test positive in this outbreak. He unknowingly operated on an Ebola patient before the outbreak was identified. His wife Dr. Rebekah Stafford also treated the same patient and was evacuated to Germany as a precaution. Dr. LaRochelle was exposed through a separate patient and is being monitored in Prague.
             </div>
           </div>
         </div>
@@ -236,16 +251,12 @@
         <div id="sit-uscontacts" class="sit-content">
           <div class="sit-content-inner">
             <div class="sit-content-title">&gt; US HIGH-RISK CONTACTS</div>
-            <div class="data-row"><span class="dr-label">Total contacts</span><span class="dr-value warn">6</span></div>
-            <div class="data-row"><span class="dr-label">Germany</span><span class="dr-value">5 contacts &bull; quarantine during monitoring</span></div>
-            <div class="data-row"><span class="dr-label">Czech Republic</span><span class="dr-value">1 contact &bull; monitoring</span></div>
-            <div class="data-row"><span class="dr-label">Travel status (May 19)</span><span class="dr-value">Finalizing travel plans to Europe</span></div>
-            <div class="data-row"><span class="dr-label">CDC incident manager</span><span class="dr-value">Dr. Satish Pillai</span></div>
-            <div class="sit-quote">
-              "The individuals are traveling to Europe, including in Germany, and they will be in quarantine during their monitoring period." &mdash; Dr. Satish Pillai, CDC Ebola incident manager
-            </div>
+            <div class="data-row"><span class="dr-label">Total contacts</span><span class="dr-value warn">6 &mdash; all asymptomatic as of May 20</span></div>
+            <div class="data-row"><span class="dr-label">Germany (5)</span><span class="dr-value">Dr. Rebekah Stafford, 38 &bull; 4 young children &bull; quarantine + monitoring</span></div>
+            <div class="data-row"><span class="dr-label">Czech Republic (1)</span><span class="dr-value">Dr. Patrick LaRochelle, 46 &bull; Bulovka Hospital, Prague &bull; monitoring</span></div>
+            <div class="data-row"><span class="dr-label">Status (May 20)</span><span class="dr-value bright">Arrived in Europe &bull; no symptoms reported</span></div>
             <div class="sit-note">
-              These are individuals considered high-risk contacts of Peter Stafford or others infected in DRC. Choosing Europe for their monitoring period rather than the US reflects logistical proximity to where they were when exposed.
+              Dr. Rebekah Stafford treated the same patient as her husband Peter Stafford. Dr. LaRochelle was exposed through a separate Ebola patient. None of the 6 contacts are currently showing symptoms. All are in quarantine for the 21-day Ebola incubation window.
             </div>
           </div>
         </div>
