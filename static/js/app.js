@@ -48,7 +48,7 @@ const SitNav = {
     .attr('preserveAspectRatio', 'xMidYMid meet');
 
   const projection = d3.geoNaturalEarth1()
-    .scale(w / 6.5)
+    .scale(w / 5)
     .translate([w / 2, h / 2]);
 
   const path = d3.geoPath().projection(projection);

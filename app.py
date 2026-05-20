@@ -23,9 +23,13 @@ def load_outbreak():
         return json.load(f)
 
 
+# Update this string each time you push new data
+LAST_UPDATED = "May 19, 2026 · 7:30 PM"
+
+
 @app.route("/")
 def index():
-    return render_template("index.html", now=datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"))
+    return render_template("index.html", last_updated=LAST_UPDATED)
 
 
 @app.route("/support")
