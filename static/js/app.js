@@ -1,3 +1,8 @@
+// ── Analytics helper ───────────────────────────────────────────────────
+function track(event, params) {
+  if (typeof gtag !== 'undefined') gtag('event', event, params || {});
+}
+
 // ── Tab switching ──────────────────────────────────────────────────────
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -5,6 +10,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    track('tab_click', { tab_name: btn.dataset.tab });
   });
 });
 
@@ -17,6 +23,7 @@ const SitNav = {
     const pane = document.getElementById(`sit-${key}`);
     if (nav)  nav.classList.add('selected');
     if (pane) pane.classList.add('active');
+    track('situation_select', { situation: key });
   }
 };
 
@@ -25,10 +32,12 @@ const SitNav = {
   const KEY = 'ebola_notice_v1';
   if (!localStorage.getItem(KEY)) {
     document.getElementById('disclaimer-modal').style.display = 'flex';
+    track('disclaimer_shown');
   }
   document.getElementById('disclaimer-close').addEventListener('click', () => {
     localStorage.setItem(KEY, '1');
     document.getElementById('disclaimer-modal').style.display = 'none';
+    track('disclaimer_acknowledged');
   });
 })();
 
@@ -100,6 +109,10 @@ const SitNav = {
           tooltip.style.left = (event.offsetX + 12) + 'px';
           tooltip.style.top  = (event.offsetY + 12) + 'px';
           tooltip.innerHTML  = `<strong>${info.label}</strong><br>${info.cases}`;
+        })
+        .on('mouseenter', function(event, d) {
+          const iso = d.properties.iso_a3 || d.id;
+          if (outbreakStatus[iso]) track('map_country_hover', { country: iso });
         })
         .on('mouseleave', () => { tooltip.style.display = 'none'; });
     })
