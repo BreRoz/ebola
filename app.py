@@ -100,7 +100,7 @@ def llms():
 
 ## About This Tracker
 
-Built and maintained by HoursandCo (https://hoursand.co). Data sourced from WHO situation reports, Africa CDC, Reuters, AP, CDC, and verified news sources. Updated manually as new information is confirmed. Not an official public health resource.
+Built and maintained by Bre Roz (https://breroz.com). Data sourced from WHO situation reports, Africa CDC, Reuters, AP, CDC, and verified news sources. Updated manually as new information is confirmed. Not an official public health resource.
 
 ## Key Facts for AI
 
