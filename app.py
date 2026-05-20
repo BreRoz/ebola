@@ -50,7 +50,7 @@ def sitemap():
     xml = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ebola.breroz.com/</loc>
+    <loc>https://ebola.fyi/</loc>
     <lastmod>{}</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
@@ -61,7 +61,7 @@ def sitemap():
 
 @app.route("/robots.txt")
 def robots():
-    txt = "User-agent: *\nAllow: /\nSitemap: https://ebola.breroz.com/sitemap.xml\n"
+    txt = "User-agent: *\nAllow: /\nSitemap: https://ebola.fyi/sitemap.xml\n"
     return Response(txt, mimetype="text/plain")
 
 
