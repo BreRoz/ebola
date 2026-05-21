@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-20",
+  "last_updated": "2026-05-21",
   "summary": {
     "suspected_cases": 600,
     "probable_cases": 105,
@@ -21,7 +21,7 @@
       "confirmed": 51,
       "deaths": 139,
       "status": "active",
-      "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo"]
+      "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu"]
     },
     {
       "id": "UGA",
@@ -35,6 +35,22 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-05-21",
+      "text": "Air France Flight 378 Paris→Detroit diverted to Montreal after Congolese passenger boarded in error"
+    },
+    {
+      "date": "2026-05-21",
+      "text": "DHS requires all DRC/Uganda/South Sudan travelers to enter US via Dulles (IAD) only"
+    },
+    {
+      "date": "2026-05-21",
+      "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-21",
+      "text": "WaPo: White House resisted Stafford evacuation to US, delaying care (WH denies)"
+    },
     {
       "date": "2026-05-19",
       "text": "US missionary Peter Stafford airlifted to Berlin Charite Hospital for treatment"

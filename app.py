@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 20, 2026 · 8:00 AM"
+LAST_UPDATED = "May 21, 2026 · 8:00 AM"
 
 
 @app.route("/")
@@ -71,7 +71,7 @@ def llms():
 
 > Real-time tracking of the 2026 Ebola Bundibugyo outbreak in the Democratic Republic of Congo and Uganda. Free, independent, no paywall.
 
-## Current Status (as of May 20, 2026)
+## Current Status (as of May 21, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
 - Suspected cases: 600+
@@ -79,7 +79,10 @@ def llms():
 - Deaths: 139+
 - WHO status: PHEIC declared May 17, 2026
 - Primary location: Ituri Province, Democratic Republic of Congo
-- Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo
+- Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu
+- Flight diversion: Air France Flight 378 Paris→Detroit diverted to Montreal (May 21)
+- DHS: all DRC/Uganda/South Sudan travelers must enter US via Dulles (IAD) only
+- Vaccine: 6–9 months from clinical trials; no approved treatment; patient zero not found
 - Secondary location: Kampala, Uganda (2 confirmed cases, 1 death)
 - Detection gap: ~4 weeks undetected; first known death April 24, 2026
 - Vaccine pipeline: Oxford/Serum Institute candidate, 2–3 months to clinical trials
