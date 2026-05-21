@@ -8,7 +8,7 @@
     { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
     { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
     { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
-    { text: '600+ SUSPECTED  ·  139+ DEATHS  ·  51 CONFIRMED', cls: '' },
+    { text: '600+ SUSPECTED  ·  148+ DEATHS  ·  51 CONFIRMED', cls: '' },
     { text: '', cls: '' },
     { text: '[ ACCESS GRANTED ]', cls: 'access' },
   ];
@@ -299,7 +299,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK', cases: '600+ susp / 51 conf / 139 dead · Ituri, North Kivu, South Kivu' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK', cases: '600+ susp / 51 conf / 148+ dead · Ituri, North Kivu, South Kivu' },
     'UGA': { status: 'confirmed',  label: 'Uganda — Confirmed cases',    cases: '2 confirmed / 1 dead' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
@@ -355,6 +355,56 @@ const SitNav = {
     .catch(() => {
       if (loadingEl) loadingEl.textContent = 'MAP DATA UNAVAILABLE — LOADING...';
     });
+
+  // Province outbreak status (DRC + Uganda only)
+  const provinceStatus = {
+    // DRC — colored by severity
+    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE',     cases: 'Origin of outbreak · Bunia, Mongbwalu, Nyakunde' },
+    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active',   cases: 'Confirmed cases · Goma, Butembo' },
+    'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active',   cases: '2 confirmed · Bukavu · M23 rebel-held area · 1 isolated' },
+    // Uganda
+    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '2 confirmed / 1 dead' },
+  };
+
+  fetch('/static/data/provinces-drc-uga.json')
+    .then(r => r.json())
+    .then(provData => {
+      // Province fill layer
+      mapG.selectAll('.province-fill')
+        .data(provData.features)
+        .enter()
+        .append('path')
+        .attr('class', 'province-fill')
+        .attr('d', path)
+        .attr('fill', d => {
+          const ps = provinceStatus[d.properties.name];
+          return ps ? ps.fill : 'none';
+        })
+        .attr('stroke', 'none')
+        .attr('pointer-events', 'none');
+
+      // Province outline layer (all DRC + Uganda provinces)
+      mapG.selectAll('.province-outline')
+        .data(provData.features)
+        .enter()
+        .append('path')
+        .attr('class', 'province-outline')
+        .attr('d', path)
+        .attr('fill', 'none')
+        .attr('stroke', d => d.properties.adm0_a3 === 'COD' ? 'rgba(255,80,0,0.35)' : 'rgba(255,170,0,0.3)')
+        .attr('stroke-width', 0.5)
+        .attr('pointer-events', 'visibleStroke')
+        .on('mousemove', function(event, d) {
+          const ps = provinceStatus[d.properties.name];
+          if (!ps) return;
+          tooltip.style.display = 'block';
+          tooltip.style.left = (event.offsetX + 12) + 'px';
+          tooltip.style.top  = (event.offsetY + 12) + 'px';
+          tooltip.innerHTML  = `<strong>${ps.label}</strong><br>${ps.cases}`;
+        })
+        .on('mouseleave', () => { tooltip.style.display = 'none'; });
+    })
+    .catch(() => {});
 
   // Legend
   const legend = [

@@ -4,7 +4,7 @@
     "suspected_cases": 600,
     "probable_cases": 105,
     "confirmed_cases": 51,
-    "deaths": 139,
+    "deaths": 148,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -19,7 +19,7 @@
       "suspected": 600,
       "probable": 105,
       "confirmed": 51,
-      "deaths": 139,
+      "deaths": 148,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },

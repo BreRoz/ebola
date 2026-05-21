@@ -76,7 +76,7 @@ def llms():
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
 - Suspected cases: 600+
 - Lab-confirmed cases: 51
-- Deaths: 139+
+- Deaths: 148+
 - WHO status: PHEIC declared May 17, 2026
 - Primary location: Ituri Province, Democratic Republic of Congo
 - Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu, South Kivu (Bukavu — NEW)
