@@ -21,7 +21,7 @@
       "confirmed": 51,
       "deaths": 139,
       "status": "active",
-      "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu"]
+      "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
     {
       "id": "UGA",
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-21",
+      "text": "NEW PROVINCE: South Kivu confirms first Ebola case — 28yo death near Bukavu in M23 rebel-held area"
+    },
+    {
+      "date": "2026-05-21",
+      "text": "Funding cuts forced suspension of surveillance in multiple DRC areas; 920K+ IDPs in Ituri"
+    },
+    {
+      "date": "2026-05-21",
+      "text": "Canada (Ontario): 1 person hospitalized and tested for Ebola after travel to East Africa — NOT confirmed"
     },
     {
       "date": "2026-05-21",

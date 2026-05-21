@@ -79,7 +79,9 @@ def llms():
 - Deaths: 139+
 - WHO status: PHEIC declared May 17, 2026
 - Primary location: Ituri Province, Democratic Republic of Congo
-- Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu
+- Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu, South Kivu (Bukavu — NEW)
+- South Kivu: first confirmed case, 28yo death near Bukavu in M23 rebel-held area
+- 920,000+ IDPs in Ituri; funding cuts forced suspension of surveillance in multiple areas
 - Flight diversion: Air France Flight 378 Paris→Detroit diverted to Montreal (May 21)
 - DHS: all DRC/Uganda/South Sudan travelers must enter US via Dulles (IAD) only
 - Vaccine: 6–9 months from clinical trials; no approved treatment; patient zero not found

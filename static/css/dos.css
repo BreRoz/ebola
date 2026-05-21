@@ -63,6 +63,28 @@ body {
   animation: crt-flicker 8s infinite;
 }
 
+/* ── New updates popup ──────────────────────────────────────────────── */
+#new-updates-popup {
+  animation: popup-slide-up 0.35s ease;
+}
+@keyframes popup-slide-up {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.nup-item {
+  padding: 7px 14px;
+  border-bottom: 1px solid var(--green-dim);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--green);
+}
+.nup-item:last-child { border-bottom: none; }
+.nup-date {
+  color: var(--text-dim);
+  margin-right: 6px;
+  font-size: 10px;
+}
+
 /* ── Boot screen ────────────────────────────────────────────────────── */
 #boot-screen {
   position: fixed;

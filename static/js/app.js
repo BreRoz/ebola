@@ -23,6 +23,7 @@
         screen.classList.add('fade-out');
         setTimeout(() => { screen.style.display = 'none'; }, 650);
         typewriterStats();
+        setTimeout(() => NewUpdatesPopup.check(), 1800);
       }, 600);
       return;
     }
@@ -36,6 +37,69 @@
 
   nextLine();
 })();
+
+// ── New updates popup ─────────────────────────────────────────────────
+const NewUpdatesPopup = {
+  _KEY: 'ebola_seen_updates_v1',
+
+  _getSeenIds() {
+    try { return new Set(JSON.parse(localStorage.getItem(this._KEY)) || []); }
+    catch { return new Set(); }
+  },
+
+  _saveSeenIds(ids) {
+    localStorage.setItem(this._KEY, JSON.stringify([...ids]));
+  },
+
+  // Build a simple ID from each update item: date + first 40 chars of text
+  _itemId(el) {
+    const date = el.querySelector('.update-date')?.textContent?.trim().slice(0, 10) || '';
+    const text = el.textContent?.trim().replace(/\s+/g, ' ').slice(0, 40) || '';
+    return date + '|' + text;
+  },
+
+  check() {
+    const items    = [...document.querySelectorAll('.update-item')];
+    const allIds   = items.map(el => this._itemId(el));
+    const seen     = this._getSeenIds();
+    const isFirst  = seen.size === 0;
+
+    // Always save current full set
+    this._saveSeenIds(new Set(allIds));
+
+    if (isFirst || allIds.length === 0) return; // no popup on first visit
+
+    const newItems = items.filter(el => !seen.has(this._itemId(el)));
+    if (newItems.length === 0) return;
+
+    this._show(newItems);
+    track('new_updates_shown', { count: newItems.length });
+  },
+
+  _show(newItems) {
+    const list   = document.getElementById('new-updates-list');
+    const popup  = document.getElementById('new-updates-popup');
+    if (!list || !popup) return;
+
+    list.innerHTML = newItems.map(el => {
+      const date = el.querySelector('.update-date')?.textContent?.trim().slice(0, 10) || '';
+      const text = el.childNodes[el.childNodes.length - 1]?.textContent?.trim() || '';
+      return `<div class="nup-item"><span class="nup-date">${date}</span>${text}</div>`;
+    }).join('');
+
+    popup.style.display = 'block';
+  },
+};
+
+function closeNewUpdates() {
+  const popup = document.getElementById('new-updates-popup');
+  if (popup) {
+    popup.style.opacity = '0';
+    popup.style.transition = 'opacity 0.2s';
+    setTimeout(() => { popup.style.display = 'none'; }, 200);
+  }
+  track('new_updates_dismissed');
+}
 
 // ── Typewriter stats ────────────────────────────────────────────────────
 function typewriterStats() {
@@ -235,10 +299,11 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK', cases: '600+ susp / 51 conf / 139 dead · Ituri + North Kivu' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK', cases: '600+ susp / 51 conf / 139 dead · Ituri, North Kivu, South Kivu' },
     'UGA': { status: 'confirmed',  label: 'Uganda — Confirmed cases',    cases: '2 confirmed / 1 dead' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
+    'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
   };
 
   function getFill(iso) {
@@ -247,7 +312,7 @@ const SitNav = {
     if (s.status === 'active')     return '#660000';
     if (s.status === 'confirmed')  return '#664400';
     if (s.status === 'treatment')  return '#003300';
-    if (s.status === 'monitoring') return '#002200';
+    if (s.status === 'monitoring') return '#004400';
     return '#0f1a0f';
   }
 
@@ -296,7 +361,7 @@ const SitNav = {
     { color: '#660000', label: 'Active outbreak' },
     { color: '#664400', label: 'Confirmed cases' },
     { color: '#003300', label: 'Treatment (no local spread)' },
-    { color: '#002200', label: 'Monitoring' },
+    { color: '#004400', label: 'Monitoring / Testing' },
   ];
 
   const lg = svg.append('g').attr('transform', `translate(10, ${h - 90})`);
