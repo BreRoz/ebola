@@ -100,7 +100,10 @@ def llms():
 
 - CDC 21-day travel restrictions: DRC, Uganda, South Sudan (non-citizens)
 - DRC elevated to Level 3 travel advisory; Ituri Province Level 4 (Do Not Travel)
-- US funding: ~$14 million committed; 50 treatment clinics being established via CERF/OCHA
+- US funding: $23 million pledged; 50 treatment clinics planned
+- UN CERF: $60 million emergency release
+- GeneXpert platform CANNOT detect Bundibugyo virus — WHO warning to field teams
+- IS-linked attack killed 17 in Alima village, Ituri (May 21)
 - CDC has ~100 staff in Uganda, ~30 in DRC
 
 ## About This Tracker
