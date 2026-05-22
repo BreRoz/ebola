@@ -350,15 +350,6 @@
         <div id="world-map"></div>
         <div id="map-tooltip" class="map-tooltip"></div>
 
-        <!-- Feedback button — top left -->
-        <button id="map-feedback-btn" class="map-overlay-btn" style="top:10px;left:10px" onclick="feedbackTracker()">[ &#x2709; FEEDBACK ]</button>
-        <div id="map-feedback-menu" style="display:none;position:absolute;top:38px;left:10px;background:#000;border:1px solid var(--green);z-index:200;width:260px;padding:10px;">
-          <textarea id="feedback-text" placeholder="TYPE YOUR FEEDBACK HERE..." style="width:100%;height:80px;background:#000;color:var(--green);border:1px solid var(--green-dim);font-family:var(--font-mono);font-size:11px;padding:6px;resize:none;outline:none;letter-spacing:0.04em;"></textarea>
-          <div style="display:flex;gap:6px;margin-top:6px;">
-            <button id="feedback-submit-btn" class="share-menu-item" style="flex:1;border:1px solid var(--green);text-align:center;" onclick="submitFeedback()">[ SEND ]</button>
-          </div>
-        </div>
-
         <!-- Share button — top right -->
         <button id="map-share-btn" class="map-overlay-btn" style="top:10px;right:10px" onclick="shareTracker()">[ &#x2197; SHARE ]</button>
         <div id="map-share-menu" style="display:none;position:absolute;top:38px;right:10px;background:#000;border:1px solid var(--green);z-index:200;min-width:150px;">
