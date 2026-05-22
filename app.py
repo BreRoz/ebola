@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 21, 2026 · 8:00 AM"
+LAST_UPDATED = "May 22, 2026 · 8:00 AM"
 
 
 @app.route("/")
@@ -74,9 +74,9 @@ def llms():
 ## Current Status (as of May 21, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: 600+
-- Lab-confirmed cases: 51
-- Deaths: 148+
+- Suspected cases: 750+
+- Lab-confirmed cases: 82
+- Deaths: 177+
 - WHO status: PHEIC declared May 17, 2026
 - Primary location: Ituri Province, Democratic Republic of Congo
 - Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu, South Kivu (Bukavu — NEW)

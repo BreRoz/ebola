@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-21",
+  "last_updated": "2026-05-22",
   "summary": {
-    "suspected_cases": 600,
+    "suspected_cases": 750,
     "probable_cases": 105,
-    "confirmed_cases": 51,
-    "deaths": 148,
+    "confirmed_cases": 82,
+    "deaths": 177,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -16,10 +16,10 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 600,
+      "suspected": 750,
       "probable": 105,
-      "confirmed": 51,
-      "deaths": 148,
+      "confirmed": 82,
+      "deaths": 177,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
