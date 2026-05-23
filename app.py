@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 23, 2026 · 8:00 AM"
+LAST_UPDATED = "May 23, 2026 · 2:15 PM"
 
 
 @app.route("/")
@@ -71,13 +71,15 @@ def llms():
 
 > Real-time tracking of the 2026 Ebola Bundibugyo outbreak in the Democratic Republic of Congo and Uganda. Free, independent, no paywall.
 
-## Current Status (as of May 21, 2026)
+## Current Status (as of May 23, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
 - Suspected cases: 750+
 - Lab-confirmed cases: 82
 - Deaths: 177+
-- WHO status: PHEIC declared May 17, 2026
+- WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
+- CRITICAL: MSF treatment tent torched in Mongbwalu — 18 suspected Ebola patients fled, unaccounted for (May 23)
+- Second treatment center attack in one week (Rwampara burned May 22)
 - Primary location: Ituri Province, Democratic Republic of Congo
 - Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu, South Kivu (Bukavu — NEW)
 - South Kivu: first confirmed case, 28yo death near Bukavu in M23 rebel-held area

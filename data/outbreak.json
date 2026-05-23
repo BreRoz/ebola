@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22",
+  "last_updated": "2026-05-23",
   "summary": {
     "suspected_cases": 750,
     "probable_cases": 105,
@@ -46,6 +46,14 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-23",
+      "text": "CRITICAL: MSF Ebola treatment tent torched in Mongbwalu — 18 suspected cases fled into community, now unaccounted for (2nd attack in a week)"
+    },
+    {
+      "date": "2026-05-23",
+      "text": "WHO upgrades DRC risk from HIGH → VERY HIGH; Tedros: outbreak 'much larger' than 82 confirmed cases suggest"
     },
     {
       "date": "2026-05-23",
