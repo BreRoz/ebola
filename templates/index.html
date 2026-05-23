@@ -148,20 +148,8 @@
         <div class="left-section-title">&gt; OUTBREAK STATUS</div>
 
         <div class="stat-row">
-          <span class="stat-label">Suspected Cases</span>
-          <span class="stat-value danger">867+</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Confirmed Deaths</span>
-          <span class="stat-value danger">204+</span>
-        </div>
-        <div class="stat-row">
           <span class="stat-label">Lab Confirmed</span>
           <span class="stat-value warn">82</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Case Fatality</span>
-          <span class="stat-value danger">30–50%</span>
         </div>
         <div class="stat-row">
           <span class="stat-label">Strain</span>
@@ -403,6 +391,23 @@
       <!-- Right: world map -->
       <div class="map-panel">
         <div id="map-loading" class="map-loading">LOADING MAP DATA<span class="cursor">_</span></div>
+
+        <!-- Top-center stats bar -->
+        <div id="map-stats-bar">
+          <div class="msb-item">
+            <span class="msb-val danger stat-value">867+</span>
+            <span class="msb-label">SUSPECTED</span>
+          </div>
+          <div class="msb-item">
+            <span class="msb-val danger stat-value">204+</span>
+            <span class="msb-label">DEATHS</span>
+          </div>
+          <div class="msb-item">
+            <span class="msb-val warn stat-value">30–50%</span>
+            <span class="msb-label">CASE FATALITY</span>
+          </div>
+        </div>
+
         <div id="world-map"></div>
         <div id="map-tooltip" class="map-tooltip"></div>
 
