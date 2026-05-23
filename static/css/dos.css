@@ -234,6 +234,15 @@ body {
 .stat-row .stat-value.danger { color: var(--red); }
 .stat-row .stat-value.warn   { color: var(--amber); }
 
+.stat-subrow {
+  font-size: 9px;
+  color: var(--text-faint);
+  padding: 0 12px 4px 12px;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(0,77,0,0.3);
+  margin-top: -1px;
+}
+
 .dos-list {
   padding: 6px 12px;
   font-size: 11px;
