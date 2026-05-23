@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 23, 2026 · 2:15 PM"
+LAST_UPDATED = "May 24, 2026 · 3:36 AM"
 
 
 @app.route("/")
@@ -71,13 +71,15 @@ def llms():
 
 > Real-time tracking of the 2026 Ebola Bundibugyo outbreak in the Democratic Republic of Congo and Uganda. Free, independent, no paywall.
 
-## Current Status (as of May 23, 2026)
+## Current Status (as of May 24, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: 750+
+- Suspected cases: 867+
 - Lab-confirmed cases: 82
-- Deaths: 177+
+- Deaths: 204+
 - WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
+- Africa CDC: 10 countries now at risk — Angola, Burundi, CAR, Rep. of Congo, Ethiopia, Kenya, Rwanda, South Sudan, Tanzania, Zambia
+- Uganda: 5 confirmed cases (up from 2); includes driver, health worker, and DRC woman who traveled Arua→Entebbe
 - CRITICAL: MSF treatment tent torched in Mongbwalu — 18 suspected Ebola patients fled, unaccounted for (May 23)
 - Second treatment center attack in one week (Rwampara burned May 22)
 - Primary location: Ituri Province, Democratic Republic of Congo
@@ -87,7 +89,7 @@ def llms():
 - Flight diversion: Air France Flight 378 Paris→Detroit diverted to Montreal (May 21)
 - DHS: all DRC/Uganda/South Sudan travelers must enter US via Dulles (IAD) only
 - Vaccine: 6–9 months from clinical trials; no approved treatment; patient zero not found
-- Secondary location: Kampala, Uganda (2 confirmed cases, 1 death)
+- Secondary location: Uganda (5 confirmed cases, 1 death — Kampala, Arua, Entebbe)
 - Detection gap: ~4 weeks undetected; first known death April 24, 2026
 - Vaccine pipeline: Oxford/Serum Institute candidate, 2–3 months to clinical trials
 

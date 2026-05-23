@@ -8,7 +8,7 @@
     { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
     { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
     { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
-    { text: '750+ SUSPECTED  ·  177+ DEATHS  ·  82 CONFIRMED', cls: '' },
+    { text: '867+ SUSPECTED  ·  204+ DEATHS  ·  82 CONFIRMED', cls: '' },
     { text: '', cls: '' },
     { text: '[ ACCESS GRANTED ]', cls: 'access' },
   ];

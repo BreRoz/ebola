@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-23",
+  "last_updated": "2026-05-24",
   "summary": {
-    "suspected_cases": 750,
+    "suspected_cases": 867,
     "probable_cases": 105,
     "confirmed_cases": 82,
-    "deaths": 177,
+    "deaths": 204,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -16,10 +16,10 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 750,
+      "suspected": 867,
       "probable": 105,
       "confirmed": 82,
-      "deaths": 177,
+      "deaths": 204,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
@@ -27,11 +27,11 @@
       "id": "UGA",
       "name": "Uganda",
       "region": "Kampala",
-      "suspected": 2,
-      "confirmed": 2,
+      "suspected": 5,
+      "confirmed": 5,
       "deaths": 1,
       "status": "confirmed",
-      "health_zones": ["Kampala"]
+      "health_zones": ["Kampala", "Arua", "Entebbe"]
     }
   ],
   "updates": [
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-24",
+      "text": "TOLL TOPS 200: DRC health ministry confirms 204 deaths / 867 suspected cases in 3 provinces — up from 177/750 on Friday"
+    },
+    {
+      "date": "2026-05-24",
+      "text": "Uganda: 3 new cases — total now 5 confirmed / 1 dead; includes driver, health worker, and DRC woman who traveled Arua→Entebbe before testing positive"
+    },
+    {
+      "date": "2026-05-24",
+      "text": "Africa CDC: 10 countries now at risk — Angola, Burundi, CAR, Rep. of Congo, Ethiopia, Kenya, Rwanda, South Sudan, Tanzania, Zambia"
     },
     {
       "date": "2026-05-23",
