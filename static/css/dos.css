@@ -378,6 +378,18 @@ body {
   margin-top: 2px;
 }
 
+.msb-src {
+  color: var(--text-dim);
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.msb-src:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
 /* Share dropdown menu */
 .share-menu-item {
   padding: 8px 14px;
