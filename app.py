@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 24, 2026 · 3:36 AM"
+LAST_UPDATED = "May 25, 2026 · 8:15 AM"
 
 
 @app.route("/")
@@ -71,17 +71,20 @@ def llms():
 
 > Real-time tracking of the 2026 Ebola Bundibugyo outbreak in the Democratic Republic of Congo and Uganda. Free, independent, no paywall.
 
-## Current Status (as of May 24, 2026)
+## Current Status (as of May 25, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: 867+
-- Lab-confirmed cases: 82
-- Deaths: 204+
+- Suspected cases: 904+
+- Lab-confirmed cases: 100+
+- Deaths: 220+
+- Already the 3rd largest Ebola outbreak on record (just 10 days since declared)
 - WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
 - Africa CDC: 10 countries now at risk — Angola, Burundi, CAR, Rep. of Congo, Ethiopia, Kenya, Rwanda, South Sudan, Tanzania, Zambia
-- Uganda: 5 confirmed cases (up from 2); includes driver, health worker, and DRC woman who traveled Arua→Entebbe
-- CRITICAL: MSF treatment tent torched in Mongbwalu — 18 suspected Ebola patients fled, unaccounted for (May 23)
-- Second treatment center attack in one week (Rwampara burned May 22)
+- US intel (anonymous official): virus "highly likely" already spread into South Sudan
+- Uganda: 7 confirmed cases / 1 death; includes 2 health workers at private Kampala hospital (May 25)
+- 3rd hospital attack: armed men stormed Mongbwalu General Hospital with gunfire demanding bodies (May 25)
+- Bunia lab: ~40 tests/day; one day only 20 due to generator fuel outage; hand sanitizer sold out
+- Trump aid cuts left local DRC orgs closed; IRC found empty PPE shelves when outbreak declared
 - Primary location: Ituri Province, Democratic Republic of Congo
 - Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu, South Kivu (Bukavu — NEW)
 - South Kivu: first confirmed case, 28yo death near Bukavu in M23 rebel-held area
@@ -89,7 +92,7 @@ def llms():
 - Flight diversion: Air France Flight 378 Paris→Detroit diverted to Montreal (May 21)
 - DHS: all DRC/Uganda/South Sudan travelers must enter US via Dulles (IAD) only
 - Vaccine: 6–9 months from clinical trials; no approved treatment; patient zero not found
-- Secondary location: Uganda (5 confirmed cases, 1 death — Kampala, Arua, Entebbe)
+- Secondary location: Uganda (7 confirmed cases, 1 death — Kampala, Arua, Entebbe)
 - Detection gap: ~4 weeks undetected; first known death April 24, 2026
 - Vaccine pipeline: Oxford/Serum Institute candidate, 2–3 months to clinical trials
 

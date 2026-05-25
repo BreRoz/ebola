@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-24",
+  "last_updated": "2026-05-25",
   "summary": {
-    "suspected_cases": 867,
+    "suspected_cases": 904,
     "probable_cases": 105,
-    "confirmed_cases": 82,
-    "deaths": 204,
+    "confirmed_cases": 100,
+    "deaths": 220,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -16,10 +16,10 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 867,
+      "suspected": 904,
       "probable": 105,
-      "confirmed": 82,
-      "deaths": 204,
+      "confirmed": 100,
+      "deaths": 220,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
@@ -27,8 +27,8 @@
       "id": "UGA",
       "name": "Uganda",
       "region": "Kampala",
-      "suspected": 5,
-      "confirmed": 5,
+      "suspected": 7,
+      "confirmed": 7,
       "deaths": 1,
       "status": "confirmed",
       "health_zones": ["Kampala", "Arua", "Entebbe"]
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-25",
+      "text": "3RD ATTACK: Armed men stormed Mongbwalu General Hospital with gunfire demanding bodies — staff evacuated patients under fire; Hospital on general alert"
+    },
+    {
+      "date": "2026-05-25",
+      "text": "904+ suspected / 220+ deaths / 100+ confirmed / Uganda 7 cases; 3rd largest Ebola outbreak on record just 10 days after declaration; US intel: virus highly likely already in South Sudan"
+    },
+    {
+      "date": "2026-05-25",
+      "text": "Bunia lab: ~40 tests/day; one day only 20 — generator ran out of fuel; hand sanitizer sold out in all pharmacies; IRC found empty PPE shelves at outbreak declaration: 'Zero. Everyone was totally unprepared'"
     },
     {
       "date": "2026-05-24",

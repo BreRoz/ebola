@@ -8,7 +8,7 @@
     { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
     { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
     { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
-    { text: '867+ SUSPECTED  ·  204+ DEATHS  ·  82 CONFIRMED', cls: '' },
+    { text: '904+ SUSPECTED  ·  220+ DEATHS  ·  100+ CONFIRMED', cls: '' },
     { text: '', cls: '' },
     { text: '[ ACCESS GRANTED ]', cls: 'access' },
   ];
@@ -299,8 +299,8 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '867+ susp / 82 conf / 204+ dead · Ituri, North Kivu, South Kivu' },
-    'UGA': { status: 'confirmed',  label: 'Uganda — Confirmed cases',    cases: '5 confirmed / 1 dead · Kampala, Arua, Entebbe' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '904+ susp / 100+ conf / 220+ dead · Ituri, North Kivu, South Kivu' },
+    'UGA': { status: 'confirmed',  label: 'Uganda — Confirmed cases',    cases: '7 confirmed / 1 dead · Kampala, Arua, Entebbe' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
     'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
@@ -363,7 +363,7 @@ const SitNav = {
     'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active',   cases: 'Confirmed cases · Goma, Butembo' },
     'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active',   cases: '2 confirmed · Bukavu · M23 rebel-held area · 1 isolated' },
     // Uganda
-    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '5 confirmed / 1 dead · +Arua, Entebbe' },
+    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '7 confirmed / 1 dead · +Arua, Entebbe' },
   };
 
   fetch('/static/data/provinces-drc-uga.json')
