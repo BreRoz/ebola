@@ -300,7 +300,7 @@ const SitNav = {
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
     'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '904+ susp / 100+ conf / 220+ dead · Ituri, North Kivu, South Kivu' },
-    'UGA': { status: 'confirmed',  label: 'Uganda — Confirmed cases',    cases: '7 confirmed / 1 dead · Kampala, Arua, Entebbe' },
+    'UGA': { status: 'confirmed',  label: 'Uganda — 7 confirmed · all DRC flights halted', cases: '7 confirmed / 1 dead · Kampala, Arua, Entebbe' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
     'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },

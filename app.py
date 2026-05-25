@@ -81,6 +81,10 @@ def llms():
 - WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
 - Africa CDC: 10 countries now at risk — Angola, Burundi, CAR, Rep. of Congo, Ethiopia, Kenya, Rwanda, South Sudan, Tanzania, Zambia
 - US intel (anonymous official): virus "highly likely" already spread into South Sudan
+- Tedros flying to DRC on Tuesday May 26 with WHO emergencies chief Chikwe Ihekweazu; told African Union: "worse before better"
+- Uganda halted all flights to/from DRC; restricted land border crossings
+- Outbreak covers area larger than Florida
+- Patient zero: nurse, symptoms April 24 in Bunia, buried in Mongbwalu; 4 health workers died in Mongbwalu in a single week in April before Ebola identified
 - Uganda: 7 confirmed cases / 1 death; includes 2 health workers at private Kampala hospital (May 25)
 - 3rd hospital attack: armed men stormed Mongbwalu General Hospital with gunfire demanding bodies (May 25)
 - Bunia lab: ~40 tests/day; one day only 20 due to generator fuel outage; hand sanitizer sold out
