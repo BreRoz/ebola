@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ebola Outbreak Tracker — 2026 Bundibugyo Strain | ebola.fyi</title>
-  <meta name="description" content="Live tracker for the 2026 Ebola Bundibugyo outbreak in DRC and Uganda. WHO declared PHEIC May 17. 220+ deaths, 904+ suspected cases. 3rd largest outbreak on record. Independent, free, no paywall.">
+  <meta name="description" content="Live tracker for the 2026 Ebola Bundibugyo outbreak in DRC and Uganda. WHO declared PHEIC May 17. 220+ deaths, ~1,000 suspected cases. Uganda border closed. 3rd largest outbreak on record. Free, no paywall.">
   <meta name="keywords" content="ebola 2026, ebola outbreak, bundibugyo, DRC ebola, Uganda ebola, WHO PHEIC, ebola tracker, ebola cases, ebola deaths, ituri province, ebola map">
   <meta name="author" content="Bre Roz">
   <meta name="robots" content="index, follow">
@@ -13,7 +13,7 @@
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://ebola.fyi/">
   <meta property="og:title"       content="Ebola Outbreak Tracker — 2026 Bundibugyo Strain">
-  <meta property="og:description" content="904+ suspected cases · 220+ deaths · 3rd largest outbreak on record · WHO PHEIC. Live tracking of the Bundibugyo Ebola outbreak in DRC and Uganda. Free, no paywall.">
+  <meta property="og:description" content="~1,000 suspected · 220+ deaths · Uganda border closed · only 7% of contacts traced · WHO PHEIC. Live tracking of the Bundibugyo Ebola outbreak. Free, no paywall.">
   <meta property="og:image"       content="https://ebola.fyi/static/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Ebola Outbreak Tracker — 2026 Bundibugyo">
-  <meta name="twitter:description" content="904+ suspected · 220+ deaths · 3rd largest outbreak on record · WHO PHEIC · Live, free, no paywall.">
+  <meta name="twitter:description" content="~1,000 suspected · 220+ deaths · Uganda border closed · only 7% of contacts traced · WHO PHEIC · Free, no paywall.">
   <meta name="twitter:image"       content="https://ebola.fyi/static/og-image.png">
 
   <link rel="canonical" href="https://ebola.fyi/">
@@ -181,7 +181,7 @@
         <div class="dos-list">
           <div class="dos-list-item">
             <span class="country-name">DRC (Ituri)</span>
-            <span class="country-stat">904s / 220d</span>
+            <span class="country-stat">~1000s / 220d</span>
           </div>
           <div class="dos-list-item">
             <span class="country-name">DRC (South Kivu)</span>
@@ -189,7 +189,7 @@
           </div>
           <div class="dos-list-item">
             <span class="country-name">Uganda</span>
-            <span class="country-stat" style="color:var(--red)">7c / 1d ▲</span>
+            <span class="country-stat" style="color:var(--red)">7c / 1d · BORDER CLOSED</span>
           </div>
           <div class="dos-list-item">
             <span class="country-name">Germany (treatment)</span>
@@ -200,13 +200,41 @@
             <span class="country-stat">1 (monitoring)</span>
           </div>
           <div class="dos-list-item">
-            <span class="country-name">Canada (Ontario)</span>
-            <span class="country-stat">1 (testing)</span>
+            <span class="country-name">Canada</span>
+            <span class="country-stat" style="color:var(--amber)">90-day ban (DRC/UGA/SSD)</span>
+          </div>
+          <div class="dos-list-item">
+            <span class="country-name">Bahamas</span>
+            <span class="country-stat" style="color:var(--amber)">quarantine rules</span>
           </div>
         </div>
         <div style="font-size:9px;color:var(--text-faint);padding:4px 12px">s=suspected c=confirmed d=deaths</div>
 
         <div class="left-section-title" style="margin-top:10px">&gt; RECENT UPDATES</div>
+        <div class="update-item">
+          <span class="update-date">2026-05-27 <a class="update-src" href="https://apnews.com/article/ebola-congo-uganda-border-virus-b96734598ea95b1cdb71986c8b1adf43" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'AP',date:'2026-05-27'})">[src]</a></span>
+          <span style="color:var(--red)">&#x26A0; UGANDA CLOSES DRC BORDER "WITH IMMEDIATE EFFECT"</span> &mdash; against WHO guidance &bull; WHO warns closures push people to unmonitored footpaths &bull; exceptions: outbreak response, cargo, security only &bull; all entrants: 21-day mandatory isolation
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-27 <a class="update-src" href="https://www.reuters.com/business/healthcare-pharmaceuticals/breakneck-ebola-epidemic-congo-outpaces-worlds-response-2026-05-27/" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'Reuters',date:'2026-05-27'})">[src]</a></span>
+          <span style="color:var(--red)">&#x26A0; Only <strong>7% of known contacts traced</strong></span> &bull; WHO internal doc: <em>"No vaccine. No therapy. Undetected 6 weeks. HCWs dying. Every day without a fully resourced response is a day the outbreak gains ground."</em>
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-27 <a class="update-src" href="https://www.bbc.com/news/articles/cdxpdex062yo" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'BBC',date:'2026-05-27'})">[src]</a></span>
+          <span style="color:var(--amber)">Tedros arrived DRC Wednesday</span> &bull; called for immediate ceasefire: "cannot build community trust or isolate the sick while bombs are falling" &bull; "catastrophic collision of disease and conflict"
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-27 <a class="update-src" href="https://www.bbc.com/news/articles/cdxpdex062yo" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'BBC',date:'2026-05-27'})">[src]</a></span>
+          <span style="color:var(--amber)">Canada: <strong>90-day entry ban</strong> on DRC / Uganda / South Sudan residents</span> &bull; Bahamas: quarantine/isolation rules for nationals from those countries &bull; US ban already in effect for non-citizens
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-27 <a class="update-src" href="https://www.bbc.com/news/articles/cdxpdex062yo" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'BBC',date:'2026-05-27'})">[src]</a></span>
+          Of 220 suspected deaths, <strong>only 17 lab-confirmed</strong> &bull; ~1,000 showing Ebola symptoms &bull; 3,600 contacts identified &bull; experimental US antibody treatment may be introduced soon &bull; ECDC / EU Health Task Force deploying
+        </div>
+        <div class="update-item">
+          <span class="update-date">2026-05-27 <a class="update-src" href="https://www.reuters.com/business/healthcare-pharmaceuticals/breakneck-ebola-epidemic-congo-outpaces-worlds-response-2026-05-27/" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'Reuters',date:'2026-05-27'})">[src]</a></span>
+          Prof. Salim Abdool Karim (Africa CDC adviser): outbreak moving at <strong>"breakneck speed"</strong> &bull; "If you had to choose a bad place for this to happen, it would be Ituri" &bull; US withdrawal from WHO &amp; aid cuts: "The organisations that would have been able to do this work are not there anymore"
+        </div>
         <div class="update-item">
           <span class="update-date">2026-05-25 <a class="update-src" href="https://www.reuters.com/business/healthcare-pharmaceuticals/who-chief-tedros-says-there-have-been-220-suspected-deaths-ebola-outbreak-2026-05-25/" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'Reuters',date:'2026-05-25'})">[src]</a></span>
           <span style="color:var(--amber)">&#x25B2; Tedros <strong>flying to DRC on Tuesday</strong> with WHO emergencies chief Chikwe Ihekweazu</span> &bull; addressed African Union: epidemic "likely to get worse before it gets better" &bull; outbreak outpacing response
@@ -456,8 +484,8 @@
         <!-- Top-center stats bar -->
         <div id="map-stats-bar">
           <div class="msb-item">
-            <span class="msb-val danger stat-value">904+</span>
-            <span class="msb-label">SUSPECTED <a class="msb-src" href="https://apnews.com/article/ebola-congo-mongbwalu-funeral-bodies-attack-9c4237e6ed4e26dff22b242749e37e33" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'AP',stat:'suspected'})">[src]</a></span>
+            <span class="msb-val danger stat-value">~1,000</span>
+            <span class="msb-label">SUSPECTED <a class="msb-src" href="https://apnews.com/article/ebola-congo-uganda-border-virus-b96734598ea95b1cdb71986c8b1adf43" target="_blank" rel="noopener" onclick="track('source_click',{outlet:'AP',stat:'suspected'})">[src]</a></span>
           </div>
           <div class="msb-item">
             <span class="msb-val danger stat-value">220+</span>

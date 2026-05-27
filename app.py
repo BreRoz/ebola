@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 25, 2026 · 8:15 AM"
+LAST_UPDATED = "May 27, 2026 · 7:44 AM"
 
 
 @app.route("/")
@@ -71,24 +71,23 @@ def llms():
 
 > Real-time tracking of the 2026 Ebola Bundibugyo outbreak in the Democratic Republic of Congo and Uganda. Free, independent, no paywall.
 
-## Current Status (as of May 25, 2026)
+## Current Status (as of May 27, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: 904+
-- Lab-confirmed cases: 100+
-- Deaths: 220+
+- Suspected cases: ~1,000
+- Lab-confirmed cases: 101
+- Deaths: 220+ (only 17 lab-confirmed)
 - Already the 3rd largest Ebola outbreak on record (just 10 days since declared)
 - WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
+- Uganda: border with DRC CLOSED "with immediate effect" (May 27) — against WHO guidance
+- Canada: 90-day entry ban (DRC/Uganda/South Sudan); Bahamas: quarantine/isolation rules
 - Africa CDC: 10 countries now at risk — Angola, Burundi, CAR, Rep. of Congo, Ethiopia, Kenya, Rwanda, South Sudan, Tanzania, Zambia
 - US intel (anonymous official): virus "highly likely" already spread into South Sudan
-- Tedros flying to DRC on Tuesday May 26 with WHO emergencies chief Chikwe Ihekweazu; told African Union: "worse before better"
-- Uganda halted all flights to/from DRC; restricted land border crossings
-- Outbreak covers area larger than Florida
-- Patient zero: nurse, symptoms April 24 in Bunia, buried in Mongbwalu; 4 health workers died in Mongbwalu in a single week in April before Ebola identified
-- Uganda: 7 confirmed cases / 1 death; includes 2 health workers at private Kampala hospital (May 25)
-- 3rd hospital attack: armed men stormed Mongbwalu General Hospital with gunfire demanding bodies (May 25)
-- Bunia lab: ~40 tests/day; one day only 20 due to generator fuel outage; hand sanitizer sold out
-- Trump aid cuts left local DRC orgs closed; IRC found empty PPE shelves when outbreak declared
+- Only 7% of 3,600 known contacts traced; WHO internal doc: "Every day without a fully resourced response is a day the outbreak gains ground"
+- Tedros arrived DRC; called for ceasefire: "catastrophic collision of disease and conflict"
+- Experimental US antibody treatment may be introduced soon; ECDC/EU Health Task Force deploying
+- Outbreak covers area larger than Florida; Bunia lab: ~40 tests/day; sanitizer sold out
+- Trump aid cuts left local DRC orgs closed; IRC found empty PPE shelves at outbreak declaration
 - Primary location: Ituri Province, Democratic Republic of Congo
 - Active zones: Bunia, Mongbwalu, Nyakunde, Goma, Butembo, North Kivu, South Kivu (Bukavu — NEW)
 - South Kivu: first confirmed case, 28yo death near Bukavu in M23 rebel-held area

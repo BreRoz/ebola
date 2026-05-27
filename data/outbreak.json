@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-25",
+  "last_updated": "2026-05-27",
   "summary": {
-    "suspected_cases": 904,
+    "suspected_cases": 1000,
     "probable_cases": 105,
-    "confirmed_cases": 100,
+    "confirmed_cases": 101,
     "deaths": 220,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
@@ -16,9 +16,9 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 904,
+      "suspected": 1000,
       "probable": 105,
-      "confirmed": 100,
+      "confirmed": 101,
       "deaths": 220,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
@@ -46,6 +46,26 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Uganda closes DRC border 'with immediate effect' — against WHO guidance; WHO warns closures push people to unmonitored footpaths; exceptions only for outbreak response, cargo, security; all entrants: 21-day mandatory isolation"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Only 7% of known contacts traced; WHO internal doc: 'No vaccine. No therapy. Undetected 6 weeks. HCWs dying. Every day without a fully resourced response is a day the outbreak gains ground.'"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Tedros arrived DRC; called for immediate ceasefire: 'catastrophic collision of disease and conflict'; 'cannot build community trust while bombs are falling'"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Canada: 90-day entry ban (DRC/Uganda/South Sudan); Bahamas: quarantine rules; US ban already in effect for non-citizens"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Of 220 suspected deaths, only 17 lab-confirmed; ~1,000 showing symptoms; 3,600 contacts identified; experimental US antibody treatment may be introduced soon; ECDC/EU Health Task Force deploying"
     },
     {
       "date": "2026-05-25",
