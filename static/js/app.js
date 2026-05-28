@@ -8,7 +8,7 @@
     { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
     { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
     { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
-    { text: '~1,000 SUSPECTED  ·  220+ DEATHS  ·  101 CONFIRMED', cls: '' },
+    { text: '906 SUSPECTED  ·  223+ DEATHS  ·  105 CONFIRMED', cls: '' },
     { text: '', cls: '' },
     { text: '[ ACCESS GRANTED ]', cls: 'access' },
   ];
@@ -299,7 +299,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '~1,000 susp / 101 conf / 220+ dead · Ituri, North Kivu, South Kivu' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '906 susp / 105 conf / 223+ dead · Ituri, North Kivu, South Kivu' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 7 confirmed · BORDER WITH DRC CLOSED', cases: '7 confirmed / 1 dead · Kampala, Arua, Entebbe' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },

@@ -74,9 +74,9 @@ def llms():
 ## Current Status (as of May 27, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: ~1,000
-- Lab-confirmed cases: 101
-- Deaths: 220+ (only 17 lab-confirmed)
+- Suspected cases: 906 (CDC, May 26)
+- Lab-confirmed cases: 105
+- Deaths: 223 suspected / 10 confirmed (CDC, May 26)
 - Already the 3rd largest Ebola outbreak on record (just 10 days since declared)
 - WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
 - Uganda: border with DRC CLOSED "with immediate effect" (May 27) — against WHO guidance

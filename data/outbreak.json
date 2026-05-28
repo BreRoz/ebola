@@ -1,10 +1,10 @@
 {
   "last_updated": "2026-05-27",
   "summary": {
-    "suspected_cases": 1000,
+    "suspected_cases": 906,
     "probable_cases": 105,
-    "confirmed_cases": 101,
-    "deaths": 220,
+    "confirmed_cases": 105,
+    "deaths": 223,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -16,10 +16,10 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 1000,
+      "suspected": 906,
       "probable": 105,
-      "confirmed": 101,
-      "deaths": 220,
+      "confirmed": 105,
+      "deaths": 223,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "CDC (May 26): 105 confirmed / 906 suspected / 223 suspected deaths / 10 confirmed deaths in Congo; Uganda: 7 confirmed / 1 confirmed death"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Title 42 invoked: bars immigrants AND legal permanent residents (LPRs) who were in DRC/Uganda/South Sudan in prior 21 days; may also block exposed US citizens from returning"
+    },
+    {
+      "date": "2026-05-27",
+      "text": "Bunia displacement camp: 1 handwashing station and 1 thermometer for 10,000 people; those without soap wash hands with oatmeal or sand"
     },
     {
       "date": "2026-05-27",
