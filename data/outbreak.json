@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-27",
+  "last_updated": "2026-05-28",
   "summary": {
     "suspected_cases": 906,
     "probable_cases": 105,
     "confirmed_cases": 105,
-    "deaths": 223,
+    "deaths": 240,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -19,7 +19,7 @@
       "suspected": 906,
       "probable": 105,
       "confirmed": 105,
-      "deaths": 223,
+      "deaths": 240,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
@@ -46,6 +46,22 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "Deaths now 240+; global health funding at lowest since 2009; only 1 in 5 contacts traced — Dr. Gounder (KFF): 'each of those 4 out of 5 could set off a new chain of transmission'"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "US will NOT bring Ebola patients home — Americans sent to Europe or Kenya quarantine facility; Trump on record in 2014 against Ebola repatriation; CDC staff asked to volunteer for Kenya unit"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "World Cup in Houston in <3 weeks — 'we do not have a health preparedness plan in place' — Dr. Gounder; DRC team in Belgium for months (not a risk)"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "DRC suspended all Bunia flights (humanitarian/medical exceptions allowed); Jordan & Bahrain: entry bans since May 19; India: screening + postponed India-Africa summit; Thailand: DRC/Uganda visitors via Bangkok only after negative test; Mexico: increased airport screening"
     },
     {
       "date": "2026-05-27",
