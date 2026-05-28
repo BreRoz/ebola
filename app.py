@@ -74,9 +74,14 @@ def llms():
 ## Current Status (as of May 27, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: 906 (CDC, May 26)
+- Suspected cases: 1,000+
 - Lab-confirmed cases: 105
-- Deaths: 223 suspected / 10 confirmed (CDC, May 26)
+- Deaths: 246+
+- Rwanda and Uganda both closed borders with DRC
+- $500 million pledged by international donors (Africa CDC)
+- Canada 90-day ban was NOT based on public health advice — driven by FIFA World Cup hosting
+- WHO advises against travel restrictions; Africa CDC: "shame" South Sudan (zero cases) under ban
+- WHO treatment candidates: Mapp antibody, Regeneron, remdesivir, obeldesivir; Oxford/Serum vaccine 2-3 months to trial
 - Already the 3rd largest Ebola outbreak on record (just 10 days since declared)
 - WHO status: PHEIC declared May 17, 2026; DRC risk upgraded to VERY HIGH (May 23)
 - Uganda: border with DRC CLOSED "with immediate effect" (May 27) — against WHO guidance

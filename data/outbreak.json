@@ -1,10 +1,10 @@
 {
   "last_updated": "2026-05-28",
   "summary": {
-    "suspected_cases": 906,
+    "suspected_cases": 1000,
     "probable_cases": 105,
     "confirmed_cases": 105,
-    "deaths": 240,
+    "deaths": 246,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -16,10 +16,10 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 906,
+      "suspected": 1000,
       "probable": 105,
       "confirmed": 105,
-      "deaths": 240,
+      "deaths": 246,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
@@ -49,7 +49,19 @@
     },
     {
       "date": "2026-05-28",
-      "text": "Deaths now 240+; global health funding at lowest since 2009; only 1 in 5 contacts traced — Dr. Gounder (KFF): 'each of those 4 out of 5 could set off a new chain of transmission'"
+      "text": "1,000+ suspected / 246 deaths; Rwanda also closed its border with DRC; $500M pledged by international donors; Rubio: 'cannot and will not allow any cases of Ebola to enter the United States'"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "Canada's 90-day ban was NOT based on public health advice — driven by FIFA World Cup; WHO advises against travel restrictions; Africa CDC Dr. Kaseya: 'shame that South Sudan — zero cases — is under travel restriction'"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "WHO treatment candidates for trials: Mapp antibody, Regeneron (Inmazeb component), remdesivir, obeldesivir (post-exposure); Oxford/Serum vaccine: 2-3 months to trial"
+    },
+    {
+      "date": "2026-05-28",
+      "text": "Deaths now 246; global health funding lowest since 2009; only 1 in 5 contacts traced — Dr. Gounder (KFF): 'each of those 4 out of 5 could set off a new chain of transmission'"
     },
     {
       "date": "2026-05-28",
