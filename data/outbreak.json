@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-28",
+  "last_updated": "2026-05-29",
   "summary": {
-    "suspected_cases": 1000,
-    "probable_cases": 105,
-    "confirmed_cases": 105,
+    "suspected_cases": 1077,
+    "probable_cases": 121,
+    "confirmed_cases": 121,
     "deaths": 246,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
@@ -16,9 +16,9 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 1000,
-      "probable": 105,
-      "confirmed": 105,
+      "suspected": 1077,
+      "probable": 121,
+      "confirmed": 121,
       "deaths": 246,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-29",
+      "text": "KENYA HIGH COURT BLOCKED US EBOLA QUARANTINE FACILITY — Katiba Institute petition; court bars any foreign government; prohibits admission of anyone exposed; US planned 50-bed facility expandable to 250"
+    },
+    {
+      "date": "2026-05-29",
+      "text": "FIRST PATIENT RECOVERED — discharged May 28 after 2 negative tests; CDC (May 29): 1,077 suspected / 121 confirmed / 246 suspected deaths / 17 confirmed deaths"
+    },
+    {
+      "date": "2026-05-29",
+      "text": "Africa CDC: vaccine expected by end of 2026; 105 in treatment centers; Bunia camp Kingonze: 9 people in 3 square meters — 'If a single person gets infected here, everyone will die'"
     },
     {
       "date": "2026-05-28",

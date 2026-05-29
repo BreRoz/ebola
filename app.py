@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 28, 2026 · 9:20 AM"
+LAST_UPDATED = "May 29, 2026 · 9:45 AM"
 
 
 @app.route("/")
@@ -74,9 +74,12 @@ def llms():
 ## Current Status (as of May 27, 2026)
 
 - Strain: Bundibugyo virus (BDBV) — no approved vaccine or treatment
-- Suspected cases: 1,000+
-- Lab-confirmed cases: 105
-- Deaths: 246+
+- Suspected cases: 1,077 (CDC, May 29)
+- Lab-confirmed cases: 121
+- Deaths: 246 suspected / 17 confirmed
+- FIRST PATIENT RECOVERED — discharged May 28 after 2 negative tests
+- Kenya High Court BLOCKED US Ebola quarantine facility plan (Katiba Institute petition)
+- Africa CDC: vaccine expected by end of 2026
 - Rwanda and Uganda both closed borders with DRC
 - $500 million pledged by international donors (Africa CDC)
 - Canada 90-day ban was NOT based on public health advice — driven by FIFA World Cup hosting
