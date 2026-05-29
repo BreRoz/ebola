@@ -300,7 +300,7 @@ const SitNav = {
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
     'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '1,077 susp / 121 conf / 246+ dead · Ituri, North Kivu, South Kivu' },
-    'UGA': { status: 'confirmed',  label: 'Uganda — 7 confirmed · BORDER WITH DRC CLOSED', cases: '7 confirmed / 1 dead · Kampala, Arua, Entebbe' },
+    'UGA': { status: 'confirmed',  label: 'Uganda — 8 confirmed · BORDER WITH DRC CLOSED', cases: '8 confirmed / 1 dead · Kampala, Arua, Entebbe' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
     'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
@@ -363,7 +363,7 @@ const SitNav = {
     'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active',   cases: 'Confirmed cases · Goma, Butembo' },
     'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active',   cases: '2 confirmed · Bukavu · M23 rebel-held area · 1 isolated' },
     // Uganda
-    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '7 confirmed / 1 dead · +Arua, Entebbe' },
+    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '8 confirmed / 1 dead · +Arua, Entebbe' },
   };
 
   fetch('/static/data/provinces-drc-uga.json')

@@ -27,8 +27,8 @@
       "id": "UGA",
       "name": "Uganda",
       "region": "Kampala",
-      "suspected": 7,
-      "confirmed": 7,
+      "suspected": 8,
+      "confirmed": 8,
       "deaths": 1,
       "status": "confirmed",
       "health_zones": ["Kampala", "Arua", "Entebbe"]
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-05-29",
+      "text": "WHO: current CFR 30-50% based on confirmed cases — Legand: 'up to 5 out of 10 people likely to die'; Uganda now 8 confirmed cases; Tedros: travel bans 'don't help much'"
+    },
+    {
+      "date": "2026-05-29",
+      "text": "Kenya facility: Laikipia Air Base, opens Friday, 50 beds; 30+ US Public Health staff with 3 days training; Americans who test positive going to unidentified European countries; Kenya medical union 48-hour strike threat"
+    },
+    {
+      "date": "2026-05-29",
+      "text": "Rubio: $112M pledged to regional response + $13.5M to Kenya; WHO: 4.6 tonnes of aid at Bunia; UNICEF sending 100 tonnes; 245,000+ fled eastern DRC since Jan 2025"
     },
     {
       "date": "2026-05-29",
