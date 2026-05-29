@@ -78,6 +78,9 @@ def llms():
 - Lab-confirmed cases: 121
 - Deaths: 246 suspected / 17 confirmed
 - FIRST PATIENT RECOVERED — discharged May 28 after 2 negative tests
+- FUNDING HALVED: pledges fell sharply since start of week (Africa CDC); $500M previously announced
+- 5 schoolchildren killed; DRC refuses to close schools
+- CFR: 22.8% among suspected / 14% among confirmed; 4 HCW deaths confirmed; 13 health zones
 - Kenya High Court BLOCKED US Ebola quarantine facility plan (Katiba Institute petition)
 - Africa CDC: vaccine expected by end of 2026
 - Rwanda and Uganda both closed borders with DRC
