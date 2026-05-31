@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-29",
+  "last_updated": "2026-05-30",
   "summary": {
     "suspected_cases": 1077,
-    "probable_cases": 121,
-    "confirmed_cases": 121,
+    "probable_cases": 134,
+    "confirmed_cases": 134,
     "deaths": 246,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
@@ -17,8 +17,8 @@
       "name": "DR Congo",
       "region": "Ituri Province",
       "suspected": 1077,
-      "probable": 121,
-      "confirmed": 121,
+      "probable": 134,
+      "confirmed": 134,
       "deaths": 246,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
@@ -27,8 +27,8 @@
       "id": "UGA",
       "name": "Uganda",
       "region": "Kampala",
-      "suspected": 8,
-      "confirmed": 8,
+      "suspected": 9,
+      "confirmed": 9,
       "deaths": 1,
       "status": "confirmed",
       "health_zones": ["Kampala", "Arua", "Entebbe"]
@@ -48,8 +48,24 @@
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
     },
     {
+      "date": "2026-05-30",
+      "text": "Brazil: suspected Ebola case in São Paulo — 37yo man returned from DRC, in isolation at infectious diseases institute"
+    },
+    {
+      "date": "2026-05-30",
+      "text": "5 total recoveries; 4 discharged at new Bunia treatment center opening; WHO: 134 confirmed / 18 confirmed deaths; nurse tested 7 times before confirmed"
+    },
+    {
+      "date": "2026-05-30",
+      "text": "MSF: 'Never before has an Ebola outbreak recorded so many cases so soon after declaration' — deeply alarming; hundreds of samples untested; Uganda 9 confirmed"
+    },
+    {
+      "date": "2026-05-30",
+      "text": "New treatment center opened in Bunia; local lab now returns results in 24 hours (was 1,500km to Kinshasa); ADF killed 7 in Beni, North Kivu"
+    },
+    {
       "date": "2026-05-29",
-      "text": "WHO: current CFR 30-50% based on confirmed cases — Legand: 'up to 5 out of 10 people likely to die'; Uganda now 8 confirmed cases; Tedros: travel bans 'don't help much'"
+      "text": "WHO: current CFR 30-50% based on confirmed cases — Legand: 'up to 5 out of 10 people likely to die'; Uganda now 9 confirmed cases; Tedros: travel bans 'don't help much'"
     },
     {
       "date": "2026-05-29",

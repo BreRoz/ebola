@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "May 29, 2026 · 3:00 PM"
+LAST_UPDATED = "May 30, 2026 · 9:00 AM"
 
 
 @app.route("/")
@@ -106,7 +106,10 @@ def llms():
 - Flight diversion: Air France Flight 378 Paris→Detroit diverted to Montreal (May 21)
 - DHS: all DRC/Uganda/South Sudan travelers must enter US via Dulles (IAD) only
 - Vaccine: 6–9 months from clinical trials; no approved treatment; patient zero not found
-- Secondary location: Uganda (8 confirmed cases, 1 death — Kampala, Arua, Entebbe; border with DRC closed)
+- Secondary location: Uganda (9 confirmed cases, 1 death — Kampala, Arua, Entebbe; border with DRC closed)
+- Brazil (São Paulo): 1 suspected case, man returned from DRC, in isolation — not confirmed
+- 5 total recoveries confirmed; new treatment center opened in Bunia
+- Bunia lab now returns results in 24 hours (previously sent to Kinshasa)
 - Detection gap: ~4 weeks undetected; first known death April 24, 2026
 - Vaccine pipeline: Oxford/Serum Institute candidate, 2–3 months to clinical trials
 
