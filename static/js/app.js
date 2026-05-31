@@ -304,6 +304,7 @@ const SitNav = {
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
     'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
+    'BRA': { status: 'monitoring', label: 'Brazil — Suspected case (not confirmed)', cases: '1 suspected · São Paulo · 37yo man returned from DRC · in isolation' },
   };
 
   function getFill(iso) {
