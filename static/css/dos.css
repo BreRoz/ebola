@@ -342,6 +342,26 @@ body {
   color: #000;
 }
 
+/* Share button double-blink every 60 seconds */
+@keyframes share-blink {
+  0%                { background: rgba(0,0,0,0.75); color: var(--green); }
+  1%                { background: var(--green);      color: #000; }
+  2%                { background: rgba(0,0,0,0.75); color: var(--green); }
+  3%                { background: var(--green);      color: #000; }
+  4%                { background: rgba(0,0,0,0.75); color: var(--green); }
+  100%              { background: rgba(0,0,0,0.75); color: var(--green); }
+}
+
+#map-share-btn {
+  animation: share-blink 60s infinite;
+}
+
+#map-share-btn:hover {
+  animation: none;
+  background: var(--green);
+  color: #000;
+}
+
 /* Map top-center stats bar */
 #map-stats-bar {
   position: absolute;
