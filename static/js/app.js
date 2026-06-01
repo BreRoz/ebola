@@ -305,6 +305,7 @@ const SitNav = {
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
     'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
     'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses (Ebola not ruled out)', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
+    'ITA': { status: 'monitoring', label: 'Italy — 1 tested · NEGATIVE ✓', cases: '1 patient from Congo · tested negative for Ebola' },
   };
 
   function getFill(iso) {
