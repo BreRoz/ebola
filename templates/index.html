@@ -640,9 +640,9 @@
         <div id="world-map"></div>
         <div id="map-tooltip" class="map-tooltip"></div>
 
-        <!-- Share button — top right -->
-        <button id="map-share-btn" class="map-overlay-btn" style="top:10px;right:10px" onclick="shareTracker()">[ &#x2197; SHARE ]</button>
-        <div id="map-share-menu" style="display:none;position:absolute;top:38px;right:10px;background:#000;border:1px solid var(--green);z-index:200;min-width:150px;">
+        <!-- Share button — above map key (left side) -->
+        <button id="map-share-btn" class="map-overlay-btn" style="bottom:98px;left:10px" onclick="shareTracker()">[ &#x2197; SHARE ]</button>
+        <div id="map-share-menu" style="display:none;position:absolute;bottom:122px;left:10px;background:#000;border:1px solid var(--green);z-index:200;min-width:150px;">
           <div class="share-menu-item" onclick="shareVia('twitter')">𝕏 &nbsp;Post on X</div>
           <div class="share-menu-item" onclick="shareVia('facebook')">&#x2219; Facebook</div>
           <div class="share-menu-item" onclick="shareVia('whatsapp')">&#x2219; WhatsApp</div>
@@ -650,9 +650,9 @@
           <div class="share-menu-item" id="map-copy-btn" onclick="shareVia('copy')">[ COPY LINK ]</div>
         </div>
 
-        <!-- Support button — bottom right -->
-        <button id="map-support-btn" class="map-overlay-btn" style="bottom:10px;right:10px" onclick="supportTracker()">[ &#9608; THANK THE BUILDER ]</button>
-        <div id="map-support-menu" style="display:none;position:absolute;bottom:38px;right:10px;background:#000;border:1px solid var(--green);z-index:200;min-width:180px;">
+        <!-- Thank the Builder button — below map key (left side) -->
+        <button id="map-support-btn" class="map-overlay-btn" style="bottom:10px;left:10px" onclick="supportTracker()">[ &#9608; THANK THE BUILDER ]</button>
+        <div id="map-support-menu" style="display:none;position:absolute;bottom:34px;left:10px;background:#000;border:1px solid var(--green);z-index:200;min-width:180px;">
           <div class="share-menu-item" onclick="supportVia('coffee')">&#9608; Buy Me a Coffee</div>
           <div class="share-menu-item" onclick="supportVia('venmo')">&#x2219; Venmo</div>
           <div class="share-menu-item" onclick="supportVia('paypal')">&#x2219; PayPal</div>
