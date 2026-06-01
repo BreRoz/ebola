@@ -416,7 +416,7 @@ const SitNav = {
     { color: '#004400', label: 'Monitoring / Testing' },
   ];
 
-  const lg = svg.append('g').attr('transform', `translate(10, ${h - 90})`);
+  const lg = svg.append('g').attr('transform', `translate(10, ${h - 120})`);
   legend.forEach((item, i) => {
     lg.append('rect').attr('x', 0).attr('y', i * 18).attr('width', 12).attr('height', 12).attr('fill', item.color).attr('stroke', '#00cc00').attr('stroke-width', 0.5);
     lg.append('text').attr('x', 18).attr('y', i * 18 + 10).attr('fill', '#00cc00').attr('font-size', '10px').attr('font-family', "'Share Tech Mono', monospace").text(item.label);
