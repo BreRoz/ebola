@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-30",
+  "last_updated": "2026-06-01",
   "summary": {
-    "suspected_cases": 1077,
-    "probable_cases": 134,
-    "confirmed_cases": 134,
+    "suspected_cases": 1100,
+    "probable_cases": 282,
+    "confirmed_cases": 282,
     "deaths": 246,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
@@ -16,9 +16,9 @@
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 1077,
-      "probable": 134,
-      "confirmed": 134,
+      "suspected": 1100,
+      "probable": 282,
+      "confirmed": 282,
       "deaths": 246,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
@@ -46,6 +46,18 @@
     {
       "date": "2026-05-21",
       "text": "WHO: vaccine 6–9 months from clinical trials; patient zero still not identified"
+    },
+    {
+      "date": "2026-06-01",
+      "text": "Africa CDC: 282 confirmed / 43 confirmed deaths / 1,100+ suspected / 246 suspected deaths; Ituri: 264 of 282 confirmed; DRC/Uganda/South Sudan adopt $319M response plan"
+    },
+    {
+      "date": "2026-06-01",
+      "text": "Contact tracing now 45% (up from 7%); all 5 survivors are health workers (4 nurses + 1 lab worker)"
+    },
+    {
+      "date": "2026-06-01",
+      "text": "Hundreds protest at Laikipia Air Base gates; Kenya court suspension still in effect; Italy: patient from Congo tests NEGATIVE; Brazil: 2 patients — meningitis and malaria — Ebola not formally ruled out"
     },
     {
       "date": "2026-05-30",

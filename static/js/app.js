@@ -8,7 +8,7 @@
     { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
     { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
     { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
-    { text: '1,077 SUSPECTED  ·  246+ DEATHS  ·  134 CONFIRMED', cls: '' },
+    { text: '1,100+ SUSPECTED  ·  246+ DEATHS  ·  282 CONFIRMED', cls: '' },
     { text: '', cls: '' },
     { text: '[ ACCESS GRANTED ]', cls: 'access' },
   ];
@@ -299,12 +299,12 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '1,077 susp / 134 conf / 246+ dead · Ituri, North Kivu, South Kivu' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '1,100+ susp / 282 conf / 246+ dead · Ituri (264), North Kivu, South Kivu' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 9 confirmed · BORDER WITH DRC CLOSED', cases: '9 confirmed / 1 dead · Kampala, Arua, Entebbe' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
     'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
-    'BRA': { status: 'monitoring', label: 'Brazil — Suspected case (not confirmed)', cases: '1 suspected · São Paulo · 37yo man returned from DRC · in isolation' },
+    'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses (Ebola not ruled out)', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
   };
 
   function getFill(iso) {
