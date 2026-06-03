@@ -687,6 +687,7 @@
             <div id="ad-desc" style="font-size:9px;color:var(--text-dim);line-height:1.3;margin-bottom:8px"></div>
             <div style="text-align:center;border:1px solid rgba(0,200,80,0.5);color:rgba(0,200,80,0.85);font-size:9px;padding:4px 6px;letter-spacing:0.5px">View on Amazon &#x2197;</div>
           </a>
+          <div id="ad-dots" style="display:flex;justify-content:center;gap:6px;margin-top:8px"></div>
         </div>
       </div>
 
@@ -958,6 +959,25 @@
       }
     ];
     var idx = Math.floor(Math.random() * ads.length);
+    var timer;
+
+    // Build dots
+    var dotsEl = document.getElementById('ad-dots');
+    ads.forEach(function(_, i){
+      var dot = document.createElement('span');
+      dot.setAttribute('data-i', i);
+      dot.style.cssText = 'width:7px;height:7px;border-radius:50%;border:1px solid rgba(0,200,80,0.6);display:inline-block;cursor:pointer;transition:background 0.2s';
+      dot.addEventListener('click', function(){ goAd(parseInt(this.getAttribute('data-i'))); });
+      dotsEl.appendChild(dot);
+    });
+
+    function updateDots(i){
+      var dots = dotsEl.querySelectorAll('span');
+      dots.forEach(function(d, j){
+        d.style.background = j === i ? 'rgba(0,200,80,0.85)' : 'transparent';
+      });
+    }
+
     function showAd(i){
       var ad = ads[i];
       adCurrent = ad.id;
@@ -965,12 +985,18 @@
       document.getElementById('ad-name').textContent = ad.name;
       document.getElementById('ad-desc').textContent = ad.desc;
       document.getElementById('ad-link').href = ad.url;
+      updateDots(i);
     }
-    showAd(idx);
-    setInterval(function(){
-      idx = (idx + 1) % ads.length;
+
+    function goAd(i){
+      idx = i;
       showAd(idx);
-    }, 9000);
+      clearInterval(timer);
+      timer = setInterval(function(){ idx = (idx + 1) % ads.length; showAd(idx); }, 9000);
+    }
+
+    showAd(idx);
+    timer = setInterval(function(){ idx = (idx + 1) % ads.length; showAd(idx); }, 9000);
   })();
 </script>
 
