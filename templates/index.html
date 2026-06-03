@@ -677,6 +677,17 @@
           <div class="share-menu-item" onclick="supportVia('venmo')">&#x2219; Venmo</div>
           <div class="share-menu-item" onclick="supportVia('paypal')">&#x2219; PayPal</div>
         </div>
+
+        <!-- Rotating Amazon ad card — bottom right -->
+        <div id="amazon-ad" style="position:absolute;bottom:10px;right:10px;width:170px;background:rgba(0,0,0,0.88);border:1px solid rgba(0,200,80,0.35);padding:9px 9px 8px;z-index:150;font-family:var(--font-mono);">
+          <div style="font-size:8px;color:var(--text-faint);letter-spacing:1px;margin-bottom:7px">&#x2219; SPONSORED</div>
+          <a id="ad-link" href="#" target="_blank" rel="noopener sponsored" onclick="track('ad_click',{product:adCurrent})" style="display:block;text-decoration:none;">
+            <img id="ad-img" src="" alt="" style="width:100%;height:120px;object-fit:contain;background:#0a0a0a;display:block;margin-bottom:7px">
+            <div id="ad-name" style="font-size:10px;color:var(--green);line-height:1.35;margin-bottom:3px;font-weight:bold"></div>
+            <div id="ad-desc" style="font-size:9px;color:var(--text-dim);line-height:1.3;margin-bottom:8px"></div>
+            <div style="text-align:center;border:1px solid rgba(0,200,80,0.5);color:rgba(0,200,80,0.85);font-size:9px;padding:4px 6px;letter-spacing:0.5px">View on Amazon &#x2197;</div>
+          </a>
+        </div>
       </div>
 
     </div>
@@ -911,6 +922,57 @@
     <button onclick="closeNewUpdates()" style="background:none;border:1px solid var(--green);color:var(--green);font-family:var(--font-mono);font-size:11px;padding:5px 14px;cursor:pointer;letter-spacing:0.06em;">[ DISMISS ]</button>
   </div>
 </div>
+
+<!-- Amazon ad rotation -->
+<script>
+  var adCurrent = '';
+  (function(){
+    var ads = [
+      {
+        name: "KN95 Face Masks 50-Pack",
+        desc: "5-layer filtration · breathable · black",
+        img: "/static/ads/kn95.jpg",
+        url: "https://amzn.to/3Q16DoH",
+        id: "kn95"
+      },
+      {
+        name: "Nitrile Exam Gloves 100ct",
+        desc: "Medical-grade · powder-free · latex-free",
+        img: "/static/ads/gloves.jpg",
+        url: "https://amzn.to/4eiMFiF",
+        id: "gloves"
+      },
+      {
+        name: "PuroAir 400 HEPA Purifier",
+        desc: "Filters 99.9% of pollutants · 2,000 sq ft",
+        img: "/static/ads/puroair.jpg",
+        url: "https://amzn.to/4uhS6mW",
+        id: "puroair"
+      },
+      {
+        name: "No-Touch Forehead Thermometer",
+        desc: "Fever alarm · silent mode · instant read",
+        img: "/static/ads/thermometer.jpg",
+        url: "https://amzn.to/4acrKLH",
+        id: "thermometer"
+      }
+    ];
+    var idx = Math.floor(Math.random() * ads.length);
+    function showAd(i){
+      var ad = ads[i];
+      adCurrent = ad.id;
+      document.getElementById('ad-img').src = ad.img;
+      document.getElementById('ad-name').textContent = ad.name;
+      document.getElementById('ad-desc').textContent = ad.desc;
+      document.getElementById('ad-link').href = ad.url;
+    }
+    showAd(idx);
+    setInterval(function(){
+      idx = (idx + 1) % ads.length;
+      showAd(idx);
+    }, 9000);
+  })();
+</script>
 
 <!-- Boot screen -->
 <div id="boot-screen">
