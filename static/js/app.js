@@ -299,13 +299,14 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO: VERY HIGH RISK', cases: '1,100+ susp / 282 conf / 246+ dead · Ituri (264), North Kivu, South Kivu' },
-    'UGA': { status: 'confirmed',  label: 'Uganda — 9 confirmed · BORDER WITH DRC CLOSED', cases: '9 confirmed / 1 dead · Kampala, Arua, Entebbe' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '363 confirmed · 62 deaths · 116 suspected · 25 health zones · Ituri, North Kivu, South Kivu' },
+    'UGA': { status: 'confirmed',  label: 'Uganda — 15 confirmed · BORDER WITH DRC CLOSED', cases: '15 confirmed · 1 dead · 2 recovered · 12 admitted' },
     'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
-    'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact' },
-    'CAN': { status: 'monitoring', label: 'Canada — Testing (not confirmed)', cases: '1 person tested · Ontario · recent East Africa travel' },
-    'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses (Ebola not ruled out)', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
+    'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
+    'CAN': { status: 'monitoring', label: 'Canada — 90-day entry ban (DRC/Uganda/South Sudan)', cases: 'No confirmed cases · ban in effect' },
+    'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
     'ITA': { status: 'monitoring', label: 'Italy — 1 tested · NEGATIVE ✓', cases: '1 patient from Congo · tested negative for Ebola' },
+    'USA': { status: 'monitoring', label: 'USA — 3 low-risk travelers monitored (Milwaukee, WI)', cases: 'No symptoms · no known Ebola contact · Milwaukee Health Dept + state/federal partners · Jun 4' },
   };
 
   function getFill(iso) {
