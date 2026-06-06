@@ -299,9 +299,9 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '363 confirmed · 62 deaths · 116 suspected · 25 health zones · Ituri, North Kivu, South Kivu' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '~400 confirmed · 65 deaths · 116 suspected · 25 health zones · CDC: 20,000+ cases possible in 3 months' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 15 confirmed · BORDER WITH DRC CLOSED', cases: '15 confirmed · 1 dead · 2 recovered · 12 admitted' },
-    'DEU': { status: 'treatment',  label: 'Germany — Treatment (1 US missionary)', cases: 'Peter Stafford · Charité Hospital, Berlin' },
+    'DEU': { status: 'monitoring', label: 'Germany — RECOVERED ✓ Dr. Peter Stafford discharged Jun 7', cases: 'Stafford + wife + 4 children all discharged · experimental treatment · "significant therapeutic success"' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
     'CAN': { status: 'monitoring', label: 'Canada — 90-day entry ban (DRC/Uganda/South Sudan)', cases: 'No confirmed cases · ban in effect' },
     'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
@@ -362,11 +362,11 @@ const SitNav = {
   // Province outbreak status (DRC + Uganda only)
   const provinceStatus = {
     // DRC — colored by severity
-    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE',     cases: 'Origin of outbreak · Bunia, Mongbwalu, Nyakunde' },
-    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active',   cases: 'Confirmed cases · Goma, Butembo' },
-    'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active',   cases: '2 confirmed · Bukavu · M23 rebel-held area · 1 isolated' },
+    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE · 17/36 health zones affected', cases: '300+ confirmed · Bunia, Mongbwalu, Nyakunde · Mambasa (ISIS-held — health workers cannot enter)' },
+    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active · 7 health zones', cases: 'Confirmed cases · Goma, Butembo · patients fleeing care' },
+    'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active · 1 health zone', cases: 'Katana (rebel-held) · burial team attacked Jun 2 · coffin abandoned' },
     // Uganda
-    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '9 confirmed / 1 dead · +Arua, Entebbe' },
+    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '15 confirmed / 1 dead / 2 recovered · border with DRC closed' },
   };
 
   fetch('/static/data/provinces-drc-uga.json')
