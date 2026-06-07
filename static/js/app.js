@@ -299,7 +299,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '~400 confirmed · 65 deaths · 116 suspected · 25 health zones · CDC: 20,000+ cases possible in 3 months' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '515 confirmed · 91 confirmed deaths · CDC: 20,000+ cases possible in 3 months' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 15 confirmed · BORDER WITH DRC CLOSED', cases: '15 confirmed · 1 dead · 2 recovered · 12 admitted' },
     'DEU': { status: 'monitoring', label: 'Germany — RECOVERED ✓ Dr. Peter Stafford discharged Jun 7', cases: 'Stafford + wife + 4 children all discharged · experimental treatment · "significant therapeutic success"' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },

@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-01",
+  "last_updated": "2026-06-07",
   "summary": {
     "suspected_cases": 1100,
     "probable_cases": 282,
-    "confirmed_cases": 282,
-    "deaths": 246,
+    "confirmed_cases": 515,
+    "deaths": 91,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
@@ -18,8 +18,8 @@
       "region": "Ituri Province",
       "suspected": 1100,
       "probable": 282,
-      "confirmed": 282,
-      "deaths": 246,
+      "confirmed": 515,
+      "deaths": 91,
       "status": "active",
       "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
     },
@@ -35,6 +35,10 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-07",
+      "text": "DRC: 515 confirmed cases / 91 confirmed deaths — 27 new samples tested positive in previous 24 hours (Reuters / DRC government data)"
+    },
     {
       "date": "2026-05-21",
       "text": "Air France Flight 378 Paris→Detroit diverted to Montreal after Congolese passenger boarded in error"
