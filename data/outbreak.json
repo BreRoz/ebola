@@ -1,15 +1,16 @@
 {
-  "last_updated": "2026-06-07",
+  "last_updated": "2026-06-08",
   "summary": {
     "suspected_cases": 1100,
     "probable_cases": 282,
-    "confirmed_cases": 515,
-    "deaths": 91,
+    "confirmed_cases": 534,
+    "deaths": 93,
+    "recoveries": 17,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 25
+    "cfr_pct": 17.4
   },
   "countries": [
     {
@@ -21,20 +22,48 @@
       "confirmed": 515,
       "deaths": 91,
       "status": "active",
-      "health_zones": ["Bunia", "Mongbwalu", "Nyakunde", "Goma", "Butembo", "North Kivu", "South Kivu (Bukavu)"]
+      "recoveries": 12,
+      "hcw_cases": 16,
+      "health_zones": ["Bunia (142)", "Rwampara (98)", "Mongbwalu (92)", "Nyankunde (24)", "North Kivu (25)", "South Kivu (1)"]
     },
     {
       "id": "UGA",
       "name": "Uganda",
-      "region": "Kampala",
-      "suspected": 9,
-      "confirmed": 9,
-      "deaths": 1,
+      "region": "Kampala & Wakiso",
+      "suspected": 0,
+      "probable": 1,
+      "confirmed": 19,
+      "deaths": 3,
+      "recoveries": 5,
       "status": "confirmed",
-      "health_zones": ["Kampala", "Arua", "Entebbe"]
+      "health_zones": ["Kampala", "Wakiso"]
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-08",
+      "text": "WHO DON (as of June 6): 534 total confirmed / 93 deaths (CFR 17.4%) — DRC 515 confirmed / 91 deaths; Uganda 19 confirmed / 2 deaths + 1 probable death; 17 total recoveries; 25 health zones affected across Ituri, North Kivu, South Kivu"
+    },
+    {
+      "date": "2026-06-08",
+      "text": "DRC contact tracing rates: Ituri 43.2%, North Kivu 82.5%, South Kivu 80.3% — 5,040 contacts under follow-up; Ituri CFR 15% (74/487 cases); North Kivu CFR 64% (16/25 cases)"
+    },
+    {
+      "date": "2026-06-08",
+      "text": "Uganda case detail: 70% of cases are Congolese nationals seeking medical care; 14 imported / 5 Ugandan nationals; districts: Kampala & Wakiso; no documented community transmission"
+    },
+    {
+      "date": "2026-06-08",
+      "text": "UAE CASE: Congolese national traveled DRC→Uganda→UAE→Uganda; UAE conducted rapid contact tracing — no secondary cases, no local transmission; risk in UAE assessed as LOW"
+    },
+    {
+      "date": "2026-06-06",
+      "text": "WHO risk reassessment: DRC = VERY HIGH (ongoing spread to new health zones); Uganda = HIGH; countries sharing land borders with DRC/Uganda = HIGH; rest of Africa + global = LOW"
+    },
+    {
+      "date": "2026-06-05",
+      "text": "Africa CDC + WHO launch joint continental preparedness and response plan — $518M requested to support African countries in detection and response"
+    },
     {
       "date": "2026-06-07",
       "text": "DRC: 515 confirmed cases / 91 confirmed deaths — 27 new samples tested positive in previous 24 hours (Reuters / DRC government data)"
