@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-08",
+  "last_updated": "2026-06-09",
   "summary": {
-    "suspected_cases": 1100,
+    "suspected_cases": 1194,
     "probable_cases": 282,
-    "confirmed_cases": 534,
-    "deaths": 93,
+    "confirmed_cases": 550,
+    "deaths": 101,
     "recoveries": 17,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
@@ -19,8 +19,8 @@
       "region": "Ituri Province",
       "suspected": 1100,
       "probable": 282,
-      "confirmed": 515,
-      "deaths": 91,
+      "confirmed": 550,
+      "deaths": 101,
       "status": "active",
       "recoveries": 12,
       "hcw_cases": 16,
@@ -40,6 +40,18 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-09",
+      "text": "Red Cross UK: 550 confirmed cases / 101 confirmed deaths / 94 suspected cases — Rwampara and Mongwalu (dense mining communities) remain the two hardest-hit areas; Uganda: 19 confirmed cases / 2 suspected deaths"
+    },
+    {
+      "date": "2026-06-09",
+      "text": "CDC: 4 designated US airports for Ebola screening — IAD (May 20), ATL (May 22), IAH (May 26), JFK (May 28); HHS interim final rule extends entry suspension to lawful permanent residents (LPRs) under 42 CFR Part 71.40"
+    },
+    {
+      "date": "2026-06-09",
+      "text": "DRC context: 44 attacks on healthcare facilities in DRC since January 2025; previous Bundibugyo outbreaks (2007, 2012) lasted ~97–106 days and were contained without vaccine — current outbreak has compounding factors (multi-province, no vaccine, 4-week detection lag, active conflict)"
+    },
     {
       "date": "2026-06-08",
       "text": "WHO DON (as of June 6): 534 total confirmed / 93 deaths (CFR 17.4%) — DRC 515 confirmed / 91 deaths; Uganda 19 confirmed / 2 deaths + 1 probable death; 17 total recoveries; 25 health zones affected across Ituri, North Kivu, South Kivu"
