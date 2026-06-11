@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-06-09",
+  "last_updated": "2026-06-10",
   "summary": {
     "suspected_cases": 1194,
     "probable_cases": 282,
-    "confirmed_cases": 550,
-    "deaths": 101,
-    "recoveries": 17,
+    "confirmed_cases": 635,
+    "deaths": 127,
+    "recoveries": 30,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 17.4
+    "cfr_pct": 20.0
   },
   "countries": [
     {
@@ -19,12 +19,12 @@
       "region": "Ituri Province",
       "suspected": 1100,
       "probable": 282,
-      "confirmed": 550,
-      "deaths": 101,
+      "confirmed": 635,
+      "deaths": 127,
       "status": "active",
-      "recoveries": 12,
+      "recoveries": 30,
       "hcw_cases": 16,
-      "health_zones": ["Bunia (142)", "Rwampara (98)", "Mongbwalu (92)", "Nyankunde (24)", "North Kivu (25)", "South Kivu (1)"]
+      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (NEW — Lake Albert shore, ~50km S of Bunia)", "North Kivu (25)", "South Kivu (1)"]
     },
     {
       "id": "UGA",
@@ -40,6 +40,18 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-10",
+      "text": "Reuters: 635 confirmed / 127 deaths / 30 recoveries — 37 new cases + 12 deaths in 24 hours, all in Ituri; NEW health zone: Tchomia (Lake Albert shore, ~50km south of Bunia); 26 zones nationwide / 18 in Ituri (94%+ of cases); treatment centres active in Bunia + Rwampara"
+    },
+    {
+      "date": "2026-06-09",
+      "text": "CIDRAP/WHO: 598 confirmed / 115 deaths / 297 in treatment / 22 recovered — CFR 19.2%; health zones rose from 16 to 25 since June 1; WHO rapid risk assessment: DRC very high, Uganda + neighbours high; Trump admin requests European travel restrictions for World Cup (begins June 11) — Belgium refuses, EC: 'no evidence additional measures needed'"
+    },
+    {
+      "date": "2026-06-09",
+      "text": "Lancet Infectious Diseases: outbreak could be as large as 1,354 cases (two scenario models: CFR-33% model → 1,164 cases by May 27; travel/population model → 1,354 by May 27) — 'considerable knowledge gaps' and 'possibly substantially undetected transmission'"
+    },
     {
       "date": "2026-06-09",
       "text": "Red Cross UK: 550 confirmed cases / 101 confirmed deaths / 94 suspected cases — Rwampara and Mongwalu (dense mining communities) remain the two hardest-hit areas; Uganda: 19 confirmed cases / 2 suspected deaths"

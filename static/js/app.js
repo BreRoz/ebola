@@ -299,7 +299,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '550 confirmed · 101 confirmed deaths · hardest hit: Rwampara + Mongwalu (mining) · CDC: 20,000+ cases possible in 3 months' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '635 confirmed · 127 deaths · 30 recovered · 26 health zones · Lancet ID: up to 1,354 actual cases' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 19 confirmed · BORDER WITH DRC CLOSED', cases: '19 confirmed · 2 suspected deaths · 5 recovered · Kampala & Wakiso' },
     'DEU': { status: 'monitoring', label: 'Germany — RECOVERED ✓ Dr. Peter Stafford discharged Jun 7', cases: 'Stafford + wife + 4 children all discharged · experimental treatment · "significant therapeutic success"' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
@@ -362,11 +362,11 @@ const SitNav = {
   // Province outbreak status (DRC + Uganda only)
   const provinceStatus = {
     // DRC — colored by severity
-    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE · 17/36 health zones affected', cases: '300+ confirmed · Bunia, Mongbwalu, Nyakunde · Mambasa (ISIS-held — health workers cannot enter)' },
-    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active · 7 health zones', cases: 'Confirmed cases · Goma, Butembo · patients fleeing care' },
-    'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active · 1 health zone', cases: 'Katana (rebel-held) · burial team attacked Jun 2 · coffin abandoned' },
+    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE · 18/36 health zones · 94%+ of all cases', cases: 'Bunia · Rwampara · Mongbwalu · Nyakunde · Tchomia ⚠ NEW (Lake Albert shore) · Mambasa (ISIS-held)' },
+    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active · 7 health zones', cases: 'Goma · Butembo · patients fleeing care · CFR 64% (16/25 cases)' },
+    'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active · 1 health zone', cases: 'Bukavu region · Katana (rebel-held) · burial team attacked Jun 2' },
     // Uganda
-    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '15 confirmed / 1 dead / 2 recovered · border with DRC closed' },
+    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '19 confirmed · 2 suspected deaths · 5 recovered · border with DRC closed' },
   };
 
   fetch('/static/data/provinces-drc-uga.json')
@@ -409,17 +409,67 @@ const SitNav = {
     })
     .catch(() => {});
 
+  // Health zone dot markers (approximate centroids)
+  const healthZones = [
+    // Ituri
+    { name: 'Bunia',      lon: 30.26, lat:  1.56, province: 'Ituri',     note: 'Provincial capital · 142+ confirmed' },
+    { name: 'Mongbwalu',  lon: 30.05, lat:  2.09, province: 'Ituri',     note: 'Outbreak origin · 92+ confirmed · gold mining' },
+    { name: 'Rwampara',   lon: 30.22, lat:  1.48, province: 'Ituri',     note: '98+ confirmed · treatment centre active' },
+    { name: 'Nyankunde',  lon: 30.12, lat:  1.41, province: 'Ituri',     note: '24+ confirmed' },
+    { name: 'Tchomia',    lon: 30.55, lat:  1.30, province: 'Ituri',     note: '⚠ NEW (Jun 10) · Lake Albert shore · ~50km S of Bunia', isNew: true },
+    { name: 'Mambasa',    lon: 29.47, lat:  1.87, province: 'Ituri',     note: 'ISIS-controlled · health workers CANNOT enter' },
+    // North Kivu
+    { name: 'Goma',       lon: 29.22, lat: -1.68, province: 'North Kivu', note: 'CFR 64% (16/25 cases)' },
+    { name: 'Butembo',    lon: 29.29, lat:  0.14, province: 'North Kivu', note: 'Confirmed cases' },
+    // South Kivu
+    { name: 'Bukavu',     lon: 28.85, lat: -2.49, province: 'South Kivu', note: 'Bukavu/Katana · rebel-held area' },
+  ];
+
+  healthZones.forEach(hz => {
+    const [px, py] = projection([hz.lon, hz.lat]);
+    const g = mapG.append('g').attr('transform', `translate(${px},${py})`);
+    g.append('circle')
+      .attr('r', hz.isNew ? 5 : 3.5)
+      .attr('fill', hz.isNew ? '#ff6600' : '#cc2200')
+      .attr('stroke', hz.isNew ? '#ffaa00' : '#ff4400')
+      .attr('stroke-width', hz.isNew ? 1.5 : 0.8)
+      .attr('opacity', 0.9);
+    if (hz.isNew) {
+      g.append('circle')
+        .attr('r', 8)
+        .attr('fill', 'none')
+        .attr('stroke', '#ffaa00')
+        .attr('stroke-width', 1)
+        .attr('opacity', 0.6);
+    }
+    g.style('cursor', 'pointer')
+      .on('mousemove', function(event) {
+        const rect = svg.node().getBoundingClientRect();
+        tooltip.style.display = 'block';
+        tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+        tooltip.style.top  = (event.clientY - rect.top  + 12) + 'px';
+        tooltip.innerHTML  = `<strong>${hz.name}</strong> (${hz.province})<br>${hz.note}`;
+      })
+      .on('mouseleave', () => { tooltip.style.display = 'none'; });
+  });
+
   // Legend
   const legend = [
     { color: '#660000', label: 'Active outbreak' },
     { color: '#664400', label: 'Confirmed cases' },
     { color: '#003300', label: 'Treatment (no local spread)' },
     { color: '#004400', label: 'Monitoring / Testing' },
+    { color: '#cc2200', label: 'Health zone (dot = affected)', dot: true },
+    { color: '#ff6600', label: 'NEW health zone (Jun 10)', dot: true },
   ];
 
-  const lg = svg.append('g').attr('transform', `translate(10, ${h - 120})`);
+  const lg = svg.append('g').attr('transform', `translate(10, ${h - 140})`);
   legend.forEach((item, i) => {
-    lg.append('rect').attr('x', 0).attr('y', i * 18).attr('width', 12).attr('height', 12).attr('fill', item.color).attr('stroke', '#00cc00').attr('stroke-width', 0.5);
+    if (item.dot) {
+      lg.append('circle').attr('cx', 6).attr('cy', i * 18 + 6).attr('r', 5).attr('fill', item.color).attr('stroke', '#00cc00').attr('stroke-width', 0.5);
+    } else {
+      lg.append('rect').attr('x', 0).attr('y', i * 18).attr('width', 12).attr('height', 12).attr('fill', item.color).attr('stroke', '#00cc00').attr('stroke-width', 0.5);
+    }
     lg.append('text').attr('x', 18).attr('y', i * 18 + 10).attr('fill', '#00cc00').attr('font-size', '10px').attr('font-family', "'Share Tech Mono', monospace").text(item.label);
   });
 })();
