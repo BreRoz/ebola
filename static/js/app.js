@@ -463,7 +463,7 @@ const SitNav = {
     { color: '#ff6600', label: 'NEW health zone (Jun 10)', dot: true },
   ];
 
-  const lg = svg.append('g').attr('transform', `translate(10, ${h - 270})`);
+  const lg = svg.append('g').attr('transform', `translate(10, ${h - 175})`);
   legend.forEach((item, i) => {
     if (item.dot) {
       lg.append('circle').attr('cx', 6).attr('cy', i * 18 + 6).attr('r', 5).attr('fill', item.color).attr('stroke', '#00cc00').attr('stroke-width', 0.5);
