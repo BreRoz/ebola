@@ -1,41 +1,9 @@
-// ── Boot sequence ──────────────────────────────────────────────────────
+// Boot sequence disabled
 (function() {
-  const lines = [
-    { text: 'EBOLA TRACKER OS v2.6.0 — INITIALIZING...', cls: '' },
-    { text: 'LOADING WHO SITUATION REPORT MODULE...', cls: 'dim' },
-    { text: 'LOADING AFRICA CDC FEED...', cls: 'dim' },
-    { text: 'CONNECTING TO FIELD CORRESPONDENTS — DRC/ITURI...', cls: 'dim' },
-    { text: 'DECRYPTING BUNDIBUGYO STRAIN DATA...', cls: '' },
-    { text: 'CROSS-REFERENCING REUTERS / AP / NBC...', cls: 'dim' },
-    { text: 'OUTBREAK CONFIRMED — ACTIVE PHEIC STATUS', cls: '' },
-    { text: '1,100+ SUSPECTED  ·  246+ DEATHS  ·  282 CONFIRMED', cls: '' },
-    { text: '', cls: '' },
-    { text: '[ ACCESS GRANTED ]', cls: 'access' },
-  ];
-
-  const container = document.getElementById('boot-lines');
-  const screen    = document.getElementById('boot-screen');
-  let i = 0;
-
-  function nextLine() {
-    if (i >= lines.length) {
-      setTimeout(() => {
-        screen.classList.add('fade-out');
-        setTimeout(() => { screen.style.display = 'none'; }, 650);
-        typewriterStats();
-        setTimeout(() => NewUpdatesPopup.check(), 1800);
-      }, 600);
-      return;
-    }
-    const span = document.createElement('span');
-    span.className = 'boot-line' + (lines[i].cls ? ' ' + lines[i].cls : '');
-    span.textContent = lines[i].text || ' ';
-    container.appendChild(span);
-    i++;
-    setTimeout(nextLine, i === lines.length ? 400 : Math.random() * 120 + 60);
-  }
-
-  nextLine();
+  var screen = document.getElementById('boot-screen');
+  if (screen) screen.style.display = "none";
+  typewriterStats();
+  setTimeout(function(){ NewUpdatesPopup.check(); }, 300);
 })();
 
 // ── New updates popup ─────────────────────────────────────────────────
