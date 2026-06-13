@@ -267,13 +267,14 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '635 confirmed · 127 deaths · 30 recovered · 26 health zones · Lancet ID: up to 1,354 actual cases' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '689 confirmed · 139 deaths · 32 recovered · 26 health zones · Lancet ID: up to 1,354 actual cases' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 19 confirmed · 2 deaths · BORDER CLOSED', cases: '19 confirmed · 2 confirmed deaths · border closed · AU: situation "under control"' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
     'CAN': { status: 'monitoring', label: 'Canada — 90-day entry ban (DRC/Uganda/South Sudan)', cases: 'No confirmed cases · ban in effect' },
     'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
     'ITA': { status: 'monitoring', label: 'Italy — 1 tested · NEGATIVE ✓', cases: '1 patient from Congo · tested negative for Ebola' },
     'USA': { status: 'monitoring', label: 'USA — 3 low-risk travelers monitored (Milwaukee, WI)', cases: 'No symptoms · no known Ebola contact · Milwaukee Health Dept + state/federal partners · Jun 4' },
+    'ISR': { status: 'monitoring', label: 'Israel — Entry ban (Jun 13)', cases: 'Non-citizens from DRC/Uganda/South Sudan/Rwanda/Kenya barred · 21-day window · Bundibugyo risk cited' },
   };
 
   function getFill(iso) {
