@@ -267,7 +267,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '689 confirmed · 139 deaths · 32 recovered · 26 health zones · Lancet ID: up to 1,354 actual cases' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '782 confirmed · 181 deaths · 56 recovered · 31 health zones · CFR 23% · record 72 new cases in one day' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 19 confirmed · 2 deaths · BORDER CLOSED', cases: '19 confirmed · 2 confirmed deaths · border closed · AU: situation "under control"' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
     'CAN': { status: 'monitoring', label: 'Canada — 90-day entry ban (DRC/Uganda/South Sudan)', cases: 'No confirmed cases · ban in effect' },
@@ -330,8 +330,8 @@ const SitNav = {
   // Province outbreak status (DRC + Uganda only)
   const provinceStatus = {
     // DRC — colored by severity
-    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE · 18/36 health zones · 94%+ of all cases', cases: 'Bunia · Rwampara · Mongbwalu · Nyakunde · Tchomia ⚠ NEW (Lake Albert shore) · Mambasa (ISIS-held)' },
-    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active · 7 health zones', cases: 'Goma · Butembo · patients fleeing care · CFR 64% (16/25 cases)' },
+    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE · 20 health zones · 717 confirmed · 92%+ of all cases', cases: 'Bunia (212 cases) · Rwampara · Mongbwalu · Nyakunde · Tchomia · Mambasa (ISIS-held)' },
+    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active · 10 health zones · 62 confirmed', cases: 'Goma · Butembo · patients fleeing care' },
     'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active · 1 health zone', cases: 'Bukavu region · Katana (rebel-held) · burial team attacked Jun 2' },
     // Uganda
     'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '19 confirmed · 2 suspected deaths · 5 recovered · border with DRC closed' },
@@ -380,7 +380,7 @@ const SitNav = {
   // Health zone dot markers (approximate centroids)
   const healthZones = [
     // Ituri
-    { name: 'Bunia',      lon: 30.26, lat:  1.56, province: 'Ituri',     note: 'Provincial capital · 142+ confirmed' },
+    { name: 'Bunia',      lon: 30.26, lat:  1.56, province: 'Ituri',     note: 'Provincial capital · 212 confirmed (highest single city)' },
     { name: 'Mongbwalu',  lon: 30.05, lat:  2.09, province: 'Ituri',     note: 'Outbreak origin · 92+ confirmed · gold mining' },
     { name: 'Rwampara',   lon: 30.22, lat:  1.48, province: 'Ituri',     note: '98+ confirmed · treatment centre active' },
     { name: 'Nyankunde',  lon: 30.12, lat:  1.41, province: 'Ituri',     note: '24+ confirmed' },
