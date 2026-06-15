@@ -50,9 +50,9 @@ const NewUpdatesPopup = {
     if (!list || !popup) return;
 
     list.innerHTML = newItems.map(el => {
-      const date = el.querySelector('.update-date')?.textContent?.trim().slice(0, 10) || '';
-      const text = el.childNodes[el.childNodes.length - 1]?.textContent?.trim() || '';
-      return `<div class="nup-item"><span class="nup-date">${date}</span>${text}</div>`;
+      const date     = el.querySelector('.update-date')?.textContent?.trim().slice(0, 10) || '';
+      const headline = el.children[1]?.textContent?.trim() || '';
+      return `<div class="nup-item"><span class="nup-date">${date}</span>${headline}</div>`;
     }).join('');
 
     popup.style.display = 'block';
