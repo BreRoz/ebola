@@ -329,12 +329,13 @@ const SitNav = {
 
   // Province outbreak status (DRC + Uganda only)
   const provinceStatus = {
-    // DRC — colored by severity
-    'Ituri':     { fill: '#880000', label: 'Ituri — EPICENTRE · 20 health zones · 717 confirmed · 92%+ of all cases', cases: 'Bunia (212 cases) · Rwampara · Mongbwalu · Nyakunde · Tchomia · Mambasa (ISIS-held)' },
-    'Nord-Kivu': { fill: '#660000', label: 'North Kivu — Active · 10 health zones · 62 confirmed', cases: 'Goma · Butembo · patients fleeing care' },
-    'Sud-Kivu':  { fill: '#993300', label: 'South Kivu — Active · 1 health zone', cases: 'Bukavu region · Katana (rebel-held) · burial team attacked Jun 2' },
+    // DRC — colored by severity (Ituri = epicenter, brightest red; others scale down)
+    'Ituri':     { fill: '#cc0000', label: 'Ituri — EPICENTRE · 20 health zones · 717 confirmed · 92%+ of all cases', cases: 'Bunia (212 cases) · Rwampara · Mongbwalu · Nyakunde · Tchomia · Mambasa (ISIS-held)' },
+    'Nord-Kivu': { fill: '#884400', label: 'North Kivu — Active · 10 health zones · 62 confirmed', cases: 'Goma · Butembo · patients fleeing care' },
+    'Sud-Kivu':  { fill: '#442200', label: 'South Kivu — Active · 1 health zone · 3 confirmed', cases: 'Bukavu region · Katana (rebel-held) · burial team attacked Jun 2' },
     // Uganda
-    'Kampala':   { fill: '#664400', label: 'Kampala — Confirmed',   cases: '19 confirmed · 2 suspected deaths · 5 recovered · border with DRC closed' },
+    'Kampala':   { fill: '#664400', label: 'Kampala — 8 confirmed · border with DRC closed', cases: '8 of 19 Uganda cases · 2 deaths · 5 recovered' },
+    'Wakiso':    { fill: '#443300', label: 'Wakiso — 1 confirmed (ECDC Jun 14)', cases: 'Neighbouring district of Kampala · imported case' },
   };
 
   fetch('/static/data/provinces-drc-uga.json')
