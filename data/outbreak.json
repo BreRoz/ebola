@@ -1,30 +1,30 @@
 {
-  "last_updated": "2026-06-10",
+  "last_updated": "2026-06-18",
   "summary": {
-    "suspected_cases": 1194,
-    "probable_cases": 282,
-    "confirmed_cases": 635,
-    "deaths": 127,
-    "recoveries": 30,
+    "suspected_cases": 119,
+    "probable_cases": 1,
+    "confirmed_cases": 856,
+    "deaths": 198,
+    "recoveries": 56,
     "countries_affected": ["DRC", "Uganda"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 19.2
+    "cfr_pct": 23.1
   },
   "countries": [
     {
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 1100,
-      "probable": 282,
-      "confirmed": 635,
-      "deaths": 127,
+      "suspected": 119,
+      "probable": 0,
+      "confirmed": 837,
+      "deaths": 196,
       "status": "active",
-      "recoveries": 30,
+      "recoveries": 56,
       "hcw_cases": 16,
-      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (NEW — Lake Albert shore, ~50km S of Bunia)", "North Kivu (25)", "South Kivu (1)"]
+      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)"]
     },
     {
       "id": "UGA",
@@ -33,13 +33,21 @@
       "suspected": 0,
       "probable": 1,
       "confirmed": 19,
-      "deaths": 3,
+      "deaths": 2,
       "recoveries": 5,
       "status": "confirmed",
       "health_zones": ["Kampala", "Wakiso"]
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-17",
+      "text": "WHO issues first-ever comprehensive filovirus guidelines — 16 evidence-based recommendations covering all Ebola and Marburg strains; key recs: early laboratory monitoring, rapid rehydration, vasoactive medications for shock, antibiotics for bacterial coinfections, structured survivor after-care to prevent re-transmission from viral persistence; Tedros: 'The current Bundibugyo virus outbreak is a stark reminder of the need for diligent, holistic and person-focused medical care'"
+    },
+    {
+      "date": "2026-06-15",
+      "text": "Updated totals: DRC 837 confirmed / 196 deaths as of June 15 (93% in Ituri Province); Uganda 19 confirmed / 2 deaths + 1 probable case + 1 probable death as of June 16; 37 WHO-confirmed recoveries including US citizen (humanitarian worker in DRC) and 16-month-old baby + mother discharged from Rwampara Treatment Center; CDC MMWR modeling (2026;75[22]:285-289): without sustained intervention, outbreak could reach 2014-16 West Africa scale (28,000+ cases, 11,000+ deaths); Kate White (MSF): 'No one knows the true scale or exactly where the disease is spreading in Congo'"
+    },
     {
       "date": "2026-06-10",
       "text": "Reuters: 635 confirmed / 127 deaths / 30 recoveries — 37 new cases + 12 deaths in 24 hours, all in Ituri; NEW health zone: Tchomia (Lake Albert shore, ~50km south of Bunia); 26 zones nationwide / 18 in Ituri (94%+ of cases); treatment centres active in Bunia + Rwampara"
