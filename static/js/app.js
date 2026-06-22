@@ -267,7 +267,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '808 confirmed · 192 deaths · 31 health zones · CFR 24% · Africa CDC: could be WORST EVER outbreak' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '1,003 confirmed · 254 deaths · CFR 25% · CROSSED 1,000 CASES · Africa CDC: could be WORST EVER outbreak' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 19 confirmed · 2 deaths · BORDER CLOSED', cases: '19 confirmed · 2 confirmed deaths · border closed · AU: situation "under control"' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
     'CAN': { status: 'monitoring', label: 'Canada — 90-day entry ban (DRC/Uganda/South Sudan)', cases: 'No confirmed cases · ban in effect' },
