@@ -24,7 +24,7 @@ def load_outbreak():
 
 
 # Update this string each time you push new data
-LAST_UPDATED = "June 23, 2026 · 8:59 AM CDT"
+LAST_UPDATED = "June 25, 2026 · 9:00 AM CDT"
 
 
 @app.route("/")

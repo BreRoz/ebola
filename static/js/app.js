@@ -267,8 +267,9 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '1,003+ confirmed · 267 deaths · CFR 27% · WHO: highest first-month total of ANY Ebola outbreak in history' },
-    'UGA': { status: 'confirmed',  label: 'Uganda — 19 confirmed · 2 deaths · BORDER CLOSED', cases: '19 confirmed · 2 confirmed deaths · border closed · AU: situation "under control"' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '1,094 confirmed · 277 deaths · CFR 25% · WHO: highest first-month total of ANY Ebola outbreak in history' },
+    'UGA': { status: 'confirmed',  label: 'Uganda — 20 confirmed · 2 deaths · BORDER CLOSED', cases: '20 confirmed · 2 confirmed deaths · 1 child positive · 19 under quarantine · border closed' },
+    'FRA': { status: 'confirmed',  label: 'France — 1 confirmed · FIRST EUROPEAN CASE (Jun 25)', cases: 'Doctor returned from humanitarian mission in DRC · stable · isolated · contact tracing underway' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
     'CAN': { status: 'monitoring', label: 'Canada — 90-day entry ban (DRC/Uganda/South Sudan)', cases: 'No confirmed cases · ban in effect' },
     'BRA': { status: 'monitoring', label: 'Brazil — 2 tested, alternative diagnoses', cases: '2 tested · one meningitis, one malaria · monitoring continues' },
