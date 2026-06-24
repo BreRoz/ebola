@@ -278,8 +278,17 @@ const SitNav = {
     'ISR': { status: 'monitoring', label: 'Israel — Entry ban (Jun 13)', cases: 'Non-citizens from DRC/Uganda/South Sudan/Rwanda/Kenya barred · 21-day window · Bundibugyo risk cited' },
   };
 
-  function getFill(iso) {
-    const s = outbreakStatus[iso];
+  // Name-based fallback for countries whose iso_a3 is '-99' in Natural Earth GeoJSON
+  const nameStatus = {
+    'France': outbreakStatus['FRA'],
+  };
+
+  function getStatus(iso, name) {
+    return outbreakStatus[iso] || nameStatus[name] || null;
+  }
+
+  function getFill(iso, name) {
+    const s = getStatus(iso, name);
     if (!s) return '#0f1a0f';
     if (s.status === 'active')     return '#660000';
     if (s.status === 'confirmed')  return '#664400';
@@ -305,10 +314,11 @@ const SitNav = {
         .enter()
         .append('path')
         .attr('d', path)
-        .attr('fill', d => getFill(d.properties.iso_a3 || d.id))
+        .attr('fill', d => getFill(d.properties.iso_a3 || d.id, d.properties.name))
         .on('mousemove', function(event, d) {
-          const iso = d.properties.iso_a3 || d.id;
-          const info = outbreakStatus[iso];
+          const iso  = d.properties.iso_a3 || d.id;
+          const name = d.properties.name;
+          const info = getStatus(iso, name);
           if (!info) {
             tooltip.style.display = 'none';
             return;
@@ -319,8 +329,9 @@ const SitNav = {
           tooltip.innerHTML  = `<strong>${info.label}</strong><br>${info.cases}`;
         })
         .on('mouseenter', function(event, d) {
-          const iso = d.properties.iso_a3 || d.id;
-          if (outbreakStatus[iso]) track('map_country_hover', { country: iso });
+          const iso  = d.properties.iso_a3 || d.id;
+          const name = d.properties.name;
+          if (getStatus(iso, name)) track('map_country_hover', { country: iso || name });
         })
         .on('mouseleave', () => { tooltip.style.display = 'none'; });
     })
