@@ -280,7 +280,6 @@ const SitNav = {
 
   // Name-based fallback for countries whose iso_a3 is '-99' in Natural Earth GeoJSON
   const nameStatus = {
-    'France': outbreakStatus['FRA'],
   };
 
   function getStatus(iso, name) {
