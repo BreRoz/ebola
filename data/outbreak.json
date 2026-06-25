@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-06-18",
+  "last_updated": "2026-06-25",
   "summary": {
     "suspected_cases": 119,
     "probable_cases": 1,
-    "confirmed_cases": 856,
-    "deaths": 198,
+    "confirmed_cases": 1115,
+    "deaths": 279,
     "recoveries": 56,
-    "countries_affected": ["DRC", "Uganda"],
+    "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 23.1
+    "cfr_pct": 25.0
   },
   "countries": [
     {
@@ -32,14 +32,31 @@
       "region": "Kampala & Wakiso",
       "suspected": 0,
       "probable": 1,
-      "confirmed": 19,
+      "confirmed": 20,
       "deaths": 2,
       "recoveries": 5,
       "status": "confirmed",
       "health_zones": ["Kampala", "Wakiso"]
+    },
+    {
+      "id": "FRA",
+      "name": "France",
+      "region": "Paris",
+      "suspected": 0,
+      "probable": 0,
+      "confirmed": 1,
+      "deaths": 0,
+      "recoveries": 0,
+      "status": "confirmed",
+      "notes": "ALIMA doctor; flew Air France Kinshasa→Paris Jun 24; almost asymptomatic (headaches only); very low viral load; stable; 5 flight contacts isolated",
+      "health_zones": ["Paris"]
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-24",
+      "text": "FRANCE: first Ebola case ever detected on French territory — first case outside Africa in 2026 outbreak; patient is ALIMA (Alliance for International Medical Action) doctor; flew Air France Kinshasa→Paris, boarded 'almost asymptomatic – except for headaches'; condition 'slightly deteriorated during the flight'; immediately isolated on landing; stable; very low viral load; 5 flight passengers identified as possible contacts and put in isolation; PM Lecornu monitoring 'very closely'; Health Min. Rist: risk of transmission 'remains low'; WHO Tedros: global risk 'remains low'; ALIMA seeking to understand how contamination occurred — humanitarian workers normally require 3-week quarantine after contact with infected cases; France sets up dedicated monitoring for aid workers returning from DRC; first time France has detected Ebola (2014: two patients transported from abroad, already diagnosed)"
+    },
     {
       "date": "2026-06-17",
       "text": "WHO issues first-ever comprehensive filovirus guidelines — 16 evidence-based recommendations covering all Ebola and Marburg strains; key recs: early laboratory monitoring, rapid rehydration, vasoactive medications for shock, antibiotics for bacterial coinfections, structured survivor after-care to prevent re-transmission from viral persistence; Tedros: 'The current Bundibugyo virus outbreak is a stark reminder of the need for diligent, holistic and person-focused medical care'"
