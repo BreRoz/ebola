@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-06-25",
+  "last_updated": "2026-06-26",
   "summary": {
-    "suspected_cases": 119,
-    "probable_cases": 1,
-    "confirmed_cases": 1115,
-    "deaths": 279,
+    "suspected_cases": 0,
+    "probable_cases": 0,
+    "confirmed_cases": 1139,
+    "deaths": 293,
     "recoveries": 56,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 25.0
+    "cfr_pct": 25.7
   },
   "countries": [
     {
@@ -19,8 +19,8 @@
       "region": "Ituri Province",
       "suspected": 119,
       "probable": 0,
-      "confirmed": 837,
-      "deaths": 196,
+      "confirmed": 1118,
+      "deaths": 291,
       "status": "active",
       "recoveries": 56,
       "hcw_cases": 16,
@@ -53,6 +53,18 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-26",
+      "text": "Guardian/Africa CDC: 297 confirmed cases with UNKNOWN WHEREABOUTS — Kaseya: 'Where are these people?'; DRC 1,118 confirmed / 291 deaths; Uganda 20/2; France 1/0; total 1,139 confirmed / 293 deaths; WHO/Lancet ID modeling: 8,210 cases / 1,420 deaths by mid-September (central); worst-case 66,000 cases by September; 70% probability spread to South Sudan in coming weeks; largest outbreak in history at 5 weeks post-declaration (West Africa at same stage: 239 cases); only 13% of $910M pledged delivered; total needed $1.4B including humanitarian costs"
+    },
+    {
+      "date": "2026-06-25",
+      "text": "Africa CDC Kaseya: 'If we don't stop this outbreak now, for sure it will be the largest Ebola outbreak ever'; contact tracing at 30% (needs 80%); 95% bed occupancy in treatment centers — near breaking point; most people testing positive in Ituri not on health workers' radar; 20,000 community health workers being recruited; IDP camps: ~120 contacts per infected person; clinical trials starting next week: remdesivir vs remdesivir + MBP-134 monoclonal antibody (treatment); obeldesivir oral post-exposure prophylaxis trial mid-July (1,200 people)"
+    },
+    {
+      "date": "2026-06-25",
+      "text": "Reuters: only 10% of Bundibugyo patients show bleeding (vs ~40% expected for Ebola) — causing community denial: 'Before, it was bleeding. We haven't seen any bleeding. So you're lying to us'; 50%+ patients arriving at advanced stage; WHO Ihekweazu: 'We are just, to be honest, beginning to understand' this outbreak; Peter Piot (co-discoverer of Ebola): 'I have never seen this many cases this quickly. Without peace I fear we will not stop this'"
+    },
     {
       "date": "2026-06-24",
       "text": "FRANCE: first Ebola case ever detected on French territory — first case outside Africa in 2026 outbreak; patient is ALIMA (Alliance for International Medical Action) doctor; flew Air France Kinshasa→Paris, boarded 'almost asymptomatic – except for headaches'; condition 'slightly deteriorated during the flight'; immediately isolated on landing; stable; very low viral load; 5 flight passengers identified as possible contacts and put in isolation; PM Lecornu monitoring 'very closely'; Health Min. Rist: risk of transmission 'remains low'; WHO Tedros: global risk 'remains low'; ALIMA seeking to understand how contamination occurred — humanitarian workers normally require 3-week quarantine after contact with infected cases; France sets up dedicated monitoring for aid workers returning from DRC; first time France has detected Ebola (2014: two patients transported from abroad, already diagnosed)"
