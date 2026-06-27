@@ -3,14 +3,14 @@
   "summary": {
     "suspected_cases": 0,
     "probable_cases": 0,
-    "confirmed_cases": 1139,
-    "deaths": 293,
+    "confirmed_cases": 1221,
+    "deaths": 323,
     "recoveries": 56,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 25.7
+    "cfr_pct": 26.8
   },
   "countries": [
     {
@@ -19,8 +19,8 @@
       "region": "Ituri Province",
       "suspected": 119,
       "probable": 0,
-      "confirmed": 1118,
-      "deaths": 291,
+      "confirmed": 1200,
+      "deaths": 321,
       "status": "active",
       "recoveries": 56,
       "hcw_cases": 16,
@@ -53,6 +53,10 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-06-26",
+      "text": "CDC raises Ebola response to LEVEL 1 — highest designation, reserved for most severe health crises (previous: Katrina 2005, swine flu 2009-10, West Africa Ebola 2014-16, Zika 2016-17); DRC: 1,200+ confirmed / 321 deaths; total 1,221+ / 323; 19 CDC staff deployed overseas + 125+ already on ground; $107M emergency funding committed; White House seeking $1.4B+ from Congress including $800M for Kenya quarantine center; experimental Ebola treatment doses being sent to Africa; 2,500 diagnostic tests deploying; 25 local field epidemiologists trained for areas CDC staff cannot access"
+    },
     {
       "date": "2026-06-26",
       "text": "Guardian/Africa CDC: 297 confirmed cases with UNKNOWN WHEREABOUTS — Kaseya: 'Where are these people?'; DRC 1,118 confirmed / 291 deaths; Uganda 20/2; France 1/0; total 1,139 confirmed / 293 deaths; WHO/Lancet ID modeling: 8,210 cases / 1,420 deaths by mid-September (central); worst-case 66,000 cases by September; 70% probability spread to South Sudan in coming weeks; largest outbreak in history at 5 weeks post-declaration (West Africa at same stage: 239 cases); only 13% of $910M pledged delivered; total needed $1.4B including humanitarian costs"
