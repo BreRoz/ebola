@@ -24,7 +24,7 @@
       "status": "active",
       "recoveries": 56,
       "hcw_cases": 16,
-      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)"]
+      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (1, borders South Sudan & CAR)"]
     },
     {
       "id": "UGA",
