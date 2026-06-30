@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-06-26",
+  "last_updated": "2026-06-30",
   "summary": {
     "suspected_cases": 0,
     "probable_cases": 0,
-    "confirmed_cases": 1295,
-    "deaths": 362,
+    "confirmed_cases": 1328,
+    "deaths": 379,
     "recoveries": 56,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 28.3
+    "cfr_pct": 29.0
   },
   "countries": [
     {
@@ -19,8 +19,8 @@
       "region": "Ituri Province",
       "suspected": 119,
       "probable": 0,
-      "confirmed": 1274,
-      "deaths": 360,
+      "confirmed": 1307,
+      "deaths": 377,
       "status": "active",
       "recoveries": 56,
       "hcw_cases": 16,
@@ -54,8 +54,12 @@
   ],
   "updates": [
     {
+      "date": "2026-06-30",
+      "text": "DRC (official, Monday update): 1,307 confirmed / 377 deaths; Uganda 20 / 2; France 1 / 0; global total 1,328 confirmed / 379 deaths; CFR 29%; gatherings ban issued in 4 provinces including Kinshasa ahead of planned July 8 anti-constitutional-reform protest — opposition calls ban politically motivated; Al Jazeera from Rwampara treatment centre: health workers lack protective gear, medicines, rapid test kits, body bags; tents set on fire by angry mob last month; funeral transmission: families touch bodies over several days amid community mistrust"
+    },
+    {
       "date": "2026-06-29",
-      "text": "DRC Ministry of Health: 1,274 confirmed cases / 360 deaths (as of June 29); Uganda 20 / 2; France 1 / 0; total 1,295 confirmed / 362 deaths; CFR 28%"
+      "text": "DRC Ministry of Health: 1,274 confirmed cases / 360 deaths (as of June 29); Uganda 20 / 2; France 1 / 0; total 1,295 confirmed / 362 deaths; CFR 28%; fourth province Haut-Uélé confirmed — case traveled from Bunia, person died; borders South Sudan and CAR; entire northeast DRC (~15M people) now affected; Ituri 1,165 confirmed / 301 deaths; clinical trials imminent (WHO)"
     },
     {
       "date": "2026-06-26",
