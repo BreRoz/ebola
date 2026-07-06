@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-07-03",
+  "last_updated": "2026-07-06",
   "summary": {
     "suspected_cases": 0,
     "probable_cases": 0,
-    "confirmed_cases": 1523,
-    "deaths": 475,
+    "confirmed_cases": 1582,
+    "deaths": 508,
     "recoveries": 56,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 31.5
+    "cfr_pct": 32.4
   },
   "countries": [
     {
@@ -19,8 +19,8 @@
       "region": "Ituri Province",
       "suspected": 119,
       "probable": 0,
-      "confirmed": 1502,
-      "deaths": 473,
+      "confirmed": 1561,
+      "deaths": 506,
       "status": "active",
       "recoveries": 56,
       "hcw_cases": 16,
@@ -53,6 +53,10 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-07-06",
+      "text": "Reuters: DRC said late Sunday that confirmed Ebola cases had reached 1,561, including 506 deaths; Uganda 20 / 2; France 1 / 0; global total 1,582 confirmed / 508 deaths; CFR 32%"
+    },
     {
       "date": "2026-07-03",
       "text": "Reuters: Congo government data shows confirmed Ebola cases risen to 1,502, including 473 deaths (as of Friday, Jul 3); Uganda 20 / 2; France 1 / 0; global total 1,523 confirmed / 475 deaths; CFR 31%"
