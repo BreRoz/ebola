@@ -1,30 +1,30 @@
 {
-  "last_updated": "2026-07-06",
+  "last_updated": "2026-07-09",
   "summary": {
-    "suspected_cases": 0,
+    "suspected_cases": 304,
     "probable_cases": 0,
-    "confirmed_cases": 1582,
-    "deaths": 508,
-    "recoveries": 56,
+    "confirmed_cases": 1780,
+    "deaths": 602,
+    "recoveries": 285,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 32.4
+    "cfr_pct": 34.1
   },
   "countries": [
     {
       "id": "COD",
       "name": "DR Congo",
       "region": "Ituri Province",
-      "suspected": 119,
+      "suspected": 304,
       "probable": 0,
-      "confirmed": 1561,
-      "deaths": 506,
+      "confirmed": 1759,
+      "deaths": 600,
       "status": "active",
-      "recoveries": 56,
+      "recoveries": 285,
       "hcw_cases": 16,
-      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (1, borders South Sudan & CAR)"]
+      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (1 confirmed, new suspected cases, borders South Sudan & CAR)", "Tshopo (NEW · 2 suspected in Kisangani, one linked to Nia-Nia health zone/Ituri — under investigation)"]
     },
     {
       "id": "UGA",
@@ -53,6 +53,10 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-07-09",
+      "text": "AP/RFI: DRC death toll reaches 600, confirmed cases 1,759 (WHO); global total 1,780 confirmed / 602 deaths · CFR 34% — Africa CDC's Wessam Mankoula: 'fastest growing Ebola outbreak ever' (1,596 cases in first six weeks vs. 994 for 2014-16 West Africa outbreak at same stage); NEW SUSPECTED CASES in previously unaffected Tshopo province (2 in Kisangani — one linked to Nia-Nia health zone/Ituri, one with no apparent connection) and Haut-Uélé; 285 recovered; 304 suspected cases under investigation; 22 treatment centres / ~700 beds (+300 planned) at ~90% capacity; 10,000+ contacts monitored at 82% follow-up (95% needed); lab capacity up from 30 tests/day (Kinshasa) to 2,000+/day (decentralized); trial of MBP-134 monoclonal antibody + remdesivir (alone & combination) began Jul 2; WHO seeks $115M, only 32% funded; South Kivu clashes between DRC forces and M23 — UN's Volker Turk calls for immediate end to fighting"
+    },
     {
       "date": "2026-07-06",
       "text": "Reuters: DRC said late Sunday that confirmed Ebola cases had reached 1,561, including 506 deaths; Uganda 20 / 2; France 1 / 0; global total 1,582 confirmed / 508 deaths; CFR 32%"
