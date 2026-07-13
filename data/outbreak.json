@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-07-09",
+  "last_updated": "2026-07-13",
   "summary": {
     "suspected_cases": 304,
     "probable_cases": 0,
-    "confirmed_cases": 1780,
-    "deaths": 602,
+    "confirmed_cases": 1947,
+    "deaths": 704,
     "recoveries": 285,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 34.1
+    "cfr_pct": 36.4
   },
   "countries": [
     {
@@ -19,12 +19,12 @@
       "region": "Ituri Province",
       "suspected": 304,
       "probable": 0,
-      "confirmed": 1759,
-      "deaths": 600,
+      "confirmed": 1926,
+      "deaths": 702,
       "status": "active",
       "recoveries": 285,
       "hcw_cases": 16,
-      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (1 confirmed, new suspected cases, borders South Sudan & CAR)", "Tshopo (NEW · 2 suspected in Kisangani, one linked to Nia-Nia health zone/Ituri — under investigation)"]
+      "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (epidemic zone since Jul 11 · 1 death confirmed, borders South Sudan & CAR)", "Tshopo (epidemic zone since Jul 11 · 4 confirmed / 2 deaths, Kisangani — cases imported from Nia-Nia/Ituri)"]
     },
     {
       "id": "UGA",
@@ -53,6 +53,14 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-07-13",
+      "text": "Reuters: Congo's Ebola outbreak spreads to two more provinces — Tshopo and Haut-Uele — now formally declared an 'epidemic zone' by DRC's National Institute of Public Health (report dated Jul 11); Tshopo: 4 confirmed / 2 deaths (Kisangani); Haut-Uele: 1 death confirmed; cases in both provinces primarily imported from Nia-Nia health zone, Ituri; DRC confirmed cases now 1,926 including 702 deaths; global total 1,947 confirmed / 704 deaths · CFR 36%; senior WHO official: true scale of outbreak could be 2-4x larger than official data — 4 of 5 new cases have no known link to existing patients"
+    },
+    {
+      "date": "2026-07-13",
+      "text": "The Hill/WHO: SECOND US CITIZEN diagnosed with Ebola — Samaritan's Purse humanitarian worker (logistics role, Bunia, 15 years with the organization) diagnosed Friday, transferred to Frankfurt University Hospital's special isolation unit; 'currently stable' (Dr. Timo Wolf); not involved in direct patient care; contact tracing underway; US State Dept assisted transport to Germany; Tedros: 'infections among response personnel are not unexpected in an outbreak of this scale'; Samaritan's Purse operates 2 Ebola Treatment Centers in DRC (Bunia + Nyankunde, 40 beds) serving Ituri province (90% of national cases)"
+    },
     {
       "date": "2026-07-09",
       "text": "AP/RFI: DRC death toll reaches 600, confirmed cases 1,759 (WHO); global total 1,780 confirmed / 602 deaths · CFR 34% — Africa CDC's Wessam Mankoula: 'fastest growing Ebola outbreak ever' (1,596 cases in first six weeks vs. 994 for 2014-16 West Africa outbreak at same stage); NEW SUSPECTED CASES in previously unaffected Tshopo province (2 in Kisangani — one linked to Nia-Nia health zone/Ituri, one with no apparent connection) and Haut-Uélé; 285 recovered; 304 suspected cases under investigation; 22 treatment centres / ~700 beds (+300 planned) at ~90% capacity; 10,000+ contacts monitored at 82% follow-up (95% needed); lab capacity up from 30 tests/day (Kinshasa) to 2,000+/day (decentralized); trial of MBP-134 monoclonal antibody + remdesivir (alone & combination) began Jul 2; WHO seeks $115M, only 32% funded; South Kivu clashes between DRC forces and M23 — UN's Volker Turk calls for immediate end to fighting"

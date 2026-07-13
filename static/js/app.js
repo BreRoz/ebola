@@ -267,7 +267,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC', cases: '1,759 confirmed · 600 deaths · CFR 34% · Africa CDC: fastest growing Ebola outbreak ever' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC · 5 provinces', cases: '1,926 confirmed · 702 deaths · CFR 36% · WHO: true scale may be 2-4x official data' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 20 confirmed · 2 deaths · BORDER CLOSED', cases: '20 confirmed · 2 confirmed deaths · 1 child positive · 19 under quarantine · border closed' },
     'FRA': { status: 'confirmed',  label: 'France — 1 confirmed · FIRST EUROPEAN CASE (Jun 24)', cases: 'Doctor returned from humanitarian mission in DRC · stable · isolated · contact tracing underway' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },
@@ -344,8 +344,8 @@ const SitNav = {
     'Ituri':     { fill: '#cc0000', label: 'Ituri — EPICENTRE · 20 health zones · 717 confirmed · 92%+ of all cases', cases: 'Bunia (212 cases) · Rwampara · Mongbwalu · Nyakunde · Tchomia · Mambasa (ISIS-held)' },
     'Nord-Kivu': { fill: '#884400', label: 'North Kivu — Active · 10 health zones · 62 confirmed', cases: 'Goma · Butembo · patients fleeing care' },
     'Sud-Kivu':  { fill: '#442200', label: 'South Kivu — Active · 1 health zone · 3 confirmed', cases: 'Bukavu region · Katana (rebel-held) · burial team attacked Jun 2' },
-    'Haut-Uele': { fill: '#331100', label: 'Haut-Uélé — 1 confirmed · 1 death · new suspected cases (Jul 9)', cases: 'Case traveled from Bunia (Ituri) · borders South Sudan & CAR · chain of transmission under investigation' },
-    'Tshopo':    { fill: '#664422', label: 'Tshopo — NEW (Jul 9) · 2 SUSPECTED (not yet confirmed)', cases: 'Kisangani · 1 linked to Nia-Nia health zone (Ituri) · 1 with no known geographic connection · under investigation' },
+    'Haut-Uele': { fill: '#331100', label: 'Haut-Uélé — Epidemic zone (Jul 11) · 1 death confirmed', cases: 'Cases imported from Nia-Nia health zone (Ituri) · borders South Sudan & CAR' },
+    'Tshopo':    { fill: '#3a1a00', label: 'Tshopo — Epidemic zone (Jul 11) · 4 confirmed · 2 deaths', cases: 'Kisangani · cases imported from Nia-Nia health zone (Ituri)' },
     // Uganda
     'Kampala':   { fill: '#664400', label: 'Kampala — 8 confirmed · border with DRC closed', cases: '8 of 19 Uganda cases · 2 deaths · 5 recovered' },
     'Wakiso':    { fill: '#443300', label: 'Wakiso — 1 confirmed (ECDC Jun 14)', cases: 'Neighbouring district of Kampala · imported case' },
