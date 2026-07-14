@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-14",
   "summary": {
     "suspected_cases": 304,
     "probable_cases": 0,
-    "confirmed_cases": 1947,
-    "deaths": 704,
+    "confirmed_cases": 1984,
+    "deaths": 721,
     "recoveries": 285,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 36.4
+    "cfr_pct": 36.6
   },
   "countries": [
     {
@@ -19,11 +19,12 @@
       "region": "Ituri Province",
       "suspected": 304,
       "probable": 0,
-      "confirmed": 1926,
-      "deaths": 702,
+      "confirmed": 1963,
+      "deaths": 719,
       "status": "active",
       "recoveries": 285,
-      "hcw_cases": 16,
+      "hcw_cases": 112,
+      "hcw_deaths": 35,
       "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (epidemic zone since Jul 11 · 1 death confirmed, borders South Sudan & CAR)", "Tshopo (epidemic zone since Jul 11 · 4 confirmed / 2 deaths, Kisangani — cases imported from Nia-Nia/Ituri)"]
     },
     {
@@ -53,6 +54,14 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-07-14",
+      "text": "Al Jazeera/AFP: healthcare workers at the Rwampara Ebola treatment centre (Ituri epicentre) threaten a 'total strike' over 2 months of unpaid salaries — burned a tyre and blocked access routes Monday, gave a 48-hour ultimatum; Dr. Pascal Bahoya: 'Since May 15, we have been caring for Ebola patients without pay'; Health Minister Samuel Roger Kamba acknowledged 'payment delays' from an 'organisational issue' with the payroll list; DRC's National Institute of Public Health: healthcare workers account for 112 transmissions and 35 deaths by Sunday; Ituri (epicentre): at least 384 confirmed / 89 deaths per this report"
+    },
+    {
+      "date": "2026-07-14",
+      "text": "Al Jazeera/WHO: Chikwe Ihekweazu (Executive Director, WHO Health Emergencies Programme), after visiting the region: 'the scale of the outbreak is at least 2-4 times the number of cases we are finding' — most deaths occurring in the family environment, not medical centres; WHO confirms at least 1,963 cases / 719 deaths (DRC); 727 patients in Ebola treatment centres as of Jul 12; Uganda 20 confirmed / 2 deaths; 5 provinces affected including Tshopo and Haut-Uele; $1.5B mobilized by international partners and African nations; clinical trial (2 treatments) under way; global total 1,984 confirmed / 721 deaths"
+    },
     {
       "date": "2026-07-13",
       "text": "Reuters: Congo's Ebola outbreak spreads to two more provinces — Tshopo and Haut-Uele — now formally declared an 'epidemic zone' by DRC's National Institute of Public Health (report dated Jul 11); Tshopo: 4 confirmed / 2 deaths (Kisangani); Haut-Uele: 1 death confirmed; cases in both provinces primarily imported from Nia-Nia health zone, Ituri; DRC confirmed cases now 1,926 including 702 deaths; global total 1,947 confirmed / 704 deaths · CFR 36%; senior WHO official: true scale of outbreak could be 2-4x larger than official data — 4 of 5 new cases have no known link to existing patients"
