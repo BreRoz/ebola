@@ -267,7 +267,7 @@ const SitNav = {
 
   // Outbreak status by ISO alpha-3
   const outbreakStatus = {
-    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC · 5 provinces', cases: '1,963 confirmed · 719 deaths · CFR 37% · WHO: true scale at least 2-4x official data · HCWs threaten strike over unpaid salaries' },
+    'COD': { status: 'active',     label: 'DR Congo — ACTIVE OUTBREAK · WHO PHEIC · 3rd-largest ever', cases: '2,344 confirmed · 930 deaths · CFR 40% · Tedros: expanding faster than any previous outbreak · true tally may be 2x+ official data' },
     'UGA': { status: 'confirmed',  label: 'Uganda — 20 confirmed · 2 deaths · BORDER CLOSED', cases: '20 confirmed · 2 confirmed deaths · 1 child positive · 19 under quarantine · border closed' },
     'FRA': { status: 'confirmed',  label: 'France — 1 confirmed · FIRST EUROPEAN CASE (Jun 24)', cases: 'Doctor returned from humanitarian mission in DRC · stable · isolated · contact tracing underway' },
     'CZE': { status: 'monitoring', label: 'Czech Republic — Monitoring', cases: '1 US high-risk contact · Dr. LaRochelle · Bulovka Hospital, Prague' },

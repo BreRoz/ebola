@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-07-14",
+  "last_updated": "2026-07-21",
   "summary": {
     "suspected_cases": 304,
     "probable_cases": 0,
-    "confirmed_cases": 1984,
-    "deaths": 721,
+    "confirmed_cases": 2365,
+    "deaths": 932,
     "recoveries": 285,
     "countries_affected": ["DRC", "Uganda", "France"],
     "strain": "Bundibugyo",
     "who_status": "PHEIC",
     "pheic_date": "2026-05-17",
-    "cfr_pct": 36.6
+    "cfr_pct": 39.7
   },
   "countries": [
     {
@@ -19,12 +19,12 @@
       "region": "Ituri Province",
       "suspected": 304,
       "probable": 0,
-      "confirmed": 1963,
-      "deaths": 719,
+      "confirmed": 2344,
+      "deaths": 930,
       "status": "active",
       "recoveries": 285,
       "hcw_cases": 112,
-      "hcw_deaths": 35,
+      "hcw_deaths": 36,
       "health_zones": ["Bunia", "Rwampara", "Mongbwalu", "Nyankunde", "Tchomia (Lake Albert shore, ~50km S of Bunia)", "North Kivu (31+)", "South Kivu (1+)", "Haut-Uélé (epidemic zone since Jul 11 · 1 death confirmed, borders South Sudan & CAR)", "Tshopo (epidemic zone since Jul 11 · 4 confirmed / 2 deaths, Kisangani — cases imported from Nia-Nia/Ituri)"]
     },
     {
@@ -54,6 +54,14 @@
     }
   ],
   "updates": [
+    {
+      "date": "2026-07-21",
+      "text": "Al Jazeera/WHO: Tedros says Ebola is spreading in DRC faster than any previous outbreak — 'It is now the third-largest Ebola outbreak on record. In the past month, it has expanded faster than any previous outbreak'; DRC's 2018-2020 outbreak took 10+ months to reach 2,000 confirmed cases, this one took 2 months — WHO says true tally could be at least double that; more than 80% of new cases detected outside known contact lists ('transmission chains are still being missed'); Uganda now close to being 'virus-free'; healthcare worker strike escalated — staff blocked the entrance to Bunia General Hospital over unpaid compensation"
+    },
+    {
+      "date": "2026-07-20",
+      "text": "NPR/AP + Al Jazeera: DRC Ministry of Health says death toll reaches at least 930, with 37 new deaths in 24h (Fri-Sat) — one of the highest daily totals; confirmed cases reach at least 2,344 as of Saturday; global total 2,365 confirmed / 932 deaths · CFR 40% (DRC) / 39% (global); at least 12 attacks recorded against health facilities/teams since outbreak declared; at least 36 health workers infected have died; 724 patients currently in isolation/hospitals; 22 new recoveries recorded in 24h; WHO: 80% of new cases from unknown transmission chains"
+    },
     {
       "date": "2026-07-14",
       "text": "Al Jazeera/AFP: healthcare workers at the Rwampara Ebola treatment centre (Ituri epicentre) threaten a 'total strike' over 2 months of unpaid salaries — burned a tyre and blocked access routes Monday, gave a 48-hour ultimatum; Dr. Pascal Bahoya: 'Since May 15, we have been caring for Ebola patients without pay'; Health Minister Samuel Roger Kamba acknowledged 'payment delays' from an 'organisational issue' with the payroll list; DRC's National Institute of Public Health: healthcare workers account for 112 transmissions and 35 deaths by Sunday; Ituri (epicentre): at least 384 confirmed / 89 deaths per this report"
